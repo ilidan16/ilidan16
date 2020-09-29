@@ -7,7 +7,6 @@ import math
 g = 0.418
 a = 4.738
 y = lambda x: (1/(math.sqrt(2*math.pi)*g))*np.exp(-(x-a)**2/(2*g**2))
-plt.subplots() 
 plt.xlabel('Время (С)')
 plt.ylabel('Плотность вероятности')
 plt.text(4,1,'$\sigma=0.418$')
