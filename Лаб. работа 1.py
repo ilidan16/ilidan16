@@ -1,3 +1,4 @@
+# Гистограмма и график нормального распределения для результатов измерения времени
 import matplotlib.pyplot as plt
 import numpy as np
 import math
