@@ -8,8 +8,8 @@ g = 0.682
 a = 388.388
 y = lambda x: (1/(math.sqrt(2*math.pi)*g))*np.exp(-(x-a)**2/(2*g**2))
 plt.xlabel('Сопротивление (Ом)')
-plt.ylabel('Плотность вероятности')
-plt.text(386.5,0.55,'$\sigma=0.682$')
+plt.ylabel('Плотность вероятности, с$^{-1}$')
+plt.text(386.5,0.55,'$\sigma=0.682$ (Ом)')
 plt.text(386.37,0.5,'$<R>=388.4 (Ом)$')
 x = np.linspace(386.5,390.2,100)
 plt.plot(x,y(x),color='red')
