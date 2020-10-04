@@ -9,8 +9,8 @@ g = 0.418
 a = 4.738
 y = lambda x: (1/(math.sqrt(2*math.pi)*g))*np.exp(-(x-a)**2/(2*g**2))
 plt.xlabel('Время (С)')
-plt.ylabel('Плотность вероятности')
-plt.text(4,1,'$\sigma=0.418$')
+plt.ylabel('Плотность вероятности, с$^{-1}$')
+plt.text(4,1,'$\sigma=0.418$ (с)')
 plt.text(3.9,0.9,'$<t>=4.74(c)$')
 x = np.linspace(3.5,5.93,100)
 plt.plot(x,y(x),color='red')
