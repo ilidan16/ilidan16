@@ -3,14 +3,14 @@ import turtle as t
 import math
 import random
 
-t.setup(1440,900)
 t.penup()
 t.speed(0)
-t.tracer(100,0)
+t.tracer(1000,0)
 t.hideturtle()
+t.bgcolor("black")
 
 A = [-300,-170]
-B = [150,340]
+B = [150,320]
 C = [300,-170]
 O = [0,0]
 
