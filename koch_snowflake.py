@@ -2,13 +2,16 @@
 import turtle
 
 turtle.speed(0)
-turtle.setup(width=1440, height=900)
+turtle.tracer(10,0)
+turtle.hideturtle()
 turtle.penup()
 turtle.goto(-300,-170)
 turtle.pendown()
+turtle.bgcolor("black")
+turtle.color("blue")
 
 LENGTH = 600 # длина стороны прав. треугольника
-n = 6  #количество итераций 
+n = 5  #количество итераций 
 #===========================================
 # Кривая Коха
 def koch_curve(LENGTH, n):
