@@ -3,9 +3,10 @@ import turtle as t
 import math
 import random
 
+t.setup(1440,900)
 t.penup()
 t.speed(0)
-t.tracer(1000,0)
+t.tracer(100,0)
 t.hideturtle()
 
 A = [-300,-170]
