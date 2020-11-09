@@ -1,4 +1,4 @@
-# Треугольник Серпинского
+# Треугольник Серпинского 
 import turtle as t
 import math
 import random
