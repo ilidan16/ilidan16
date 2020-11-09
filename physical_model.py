@@ -41,7 +41,7 @@ class Ball(Body):
         self.a = -g * np.sin(self.alpha) - self.V * self.b # F(сопр.)=-b*V
         self.V += self.a * MODEL_DT
 #--------------------------------------------------------
-ball = Ball(90,1,0.1)
+ball = Ball(90,1,0.2)
 
 T = 15
 for t in np.r_[0:T:MODEL_DT]:
@@ -54,10 +54,10 @@ for i in ball.trajectory:
     ball.trajectory_y.append(ball.L - np.cos(i/ball.L))
 
 #-------------------------------------------------------
-turtle.setup(1440,900)
-turtle.tracer(0,0)
-turtle.speed(0)
-turtle.hideturtle()
+    # Анимация маятника с помощью библиотеки turtle
+turtle.tracer(0,0) # выключить обновление экрана после каждого шага
+turtle.speed(0)    # максимальная скорость
+turtle.hideturtle()# удалить саму черепашку
 turtle.penup()
 turtle.width(2)
 
@@ -71,7 +71,7 @@ for i in range(len(np.r_[0:T:MODEL_DT])):
     turtle.goto(10,300)
     turtle.goto(-10,300)
     turtle.penup()
-    turtle.update()
+    turtle.update() 
     turtle.clear()
 
     
