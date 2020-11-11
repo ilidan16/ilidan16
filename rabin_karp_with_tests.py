@@ -32,7 +32,6 @@ def rabin_karp(text, pattern):
     length_pattern = len(pattern)
     if sum_pattern == 0:
         sum_pattern = 1
-        length_pattern = 1
     #=============================================
     
     for i in range(len(text) - length_pattern + 1):
