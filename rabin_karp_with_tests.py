@@ -30,8 +30,8 @@ def rabin_karp(text, pattern):
         sum_pattern += ord(pattern[q])
     #=============================================
     length_pattern = len(pattern)
-    """if sum_pattern == 0:
-        sum_pattern = 1"""
+    if sum_pattern == 0:
+        sum_pattern = 1
     #=============================================
     
     for i in range(len(text) - length_pattern + 1):
