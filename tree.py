@@ -33,10 +33,19 @@ def create_string_of_functions(iterations):
 
     return str_current
 #============================================================
-iterations = 3
+t.speed(0)
+t.penup()
+t.goto(0, -200)
+t.pendown()
+
+iterations = 6
 alpha = 30
-length = 50
+length = 5
 def draw_tree():
+    t.setheading(90)
+    x = [] # будем записывать значения в массив,
+    y = [] # а затем использовать последний эл-нт и
+    angle = [] # сразу удалять его
     for ch in create_string_of_functions(iterations):
         if ch == "1":
             t.forward(length)
@@ -45,12 +54,19 @@ def draw_tree():
             t.forward(length)
             t.pencolor("black")
         if ch == "[":
-            x = xcor()
-            y = ycor()
-            t.setheading(-alpha) # повернуть на лево
+            x.append(t.xcor()) 
+            y.append(t.ycor()) 
+            angle.append(t.heading()) 
+            t.left(alpha)
         if ch == "]":
-            
-            
+            t.penup()
+            t.goto(x.pop(), y.pop())
+            t.pendown()
+            t.setheading(angle.pop())
+            t.right(alpha)
+#============================================================
+draw_tree()
+print (create_string_of_functions(iterations))
             
             
             
