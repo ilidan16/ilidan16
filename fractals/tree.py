@@ -29,6 +29,7 @@
 
 import turtle as t
 import random
+import time
 #============================================================
 """Данная функция создаёт строку функций (команд),
 по которым потом черепашка будет рисовать дерево"""
@@ -62,7 +63,7 @@ t.goto(0, -350)
 t.pendown()
 
 iterations = 12
-alpha = 16
+alpha = 14
 length = 10
 
 def draw_tree():
@@ -77,7 +78,7 @@ def draw_tree():
     angle = []
     array_thickness = []
     for ch in create_string_of_functions(iterations):
-        if ch == "1" and random.randint(0,100) > 40:    # стебель
+        if ch == "1" """and random.randint(0,100) > 40""":    # стебель
             t.forward(length)
 
         if ch == "2" and random.randint(0,100) > 40:
@@ -115,7 +116,14 @@ def draw_tree():
             t.setheading(angle.pop())
             t.right(alpha + random.randint(-13, 13))
 #============================================================
-draw_tree()
+for _ in range(10):
+    draw_tree()
+    t.update()
+    t.clear()
+    t.penup()
+    t.goto(0,-350)
+    t.pendown()
+    time.sleep(2)
 
 
             
