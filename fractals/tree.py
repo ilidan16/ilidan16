@@ -17,7 +17,6 @@
 1: рисуй отрезок
 [: положи в стек положение и угол рисования, поверни влево
 ]: выбери из стека положение и угол, поверни вправо
-
 Однака правила будут немного отличаться:
     1. 1 -> 21
     2. 0 -> 1[20]20
@@ -62,8 +61,9 @@ t.penup()
 t.goto(0, -350)
 t.pendown()
 
-iterations = 12
-alpha = 14
+
+iterations = 11
+alpha = 20
 length = 10
 
 def draw_tree():
@@ -78,10 +78,10 @@ def draw_tree():
     angle = []
     array_thickness = []
     for ch in create_string_of_functions(iterations):
-        if ch == "1" """and random.randint(0,100) > 40""":    # стебель
+        if ch == "1" and random.randint(0,100) < 60:    # стебель
             t.forward(length)
 
-        if ch == "2" and random.randint(0,100) > 40:
+        if ch == "2" and random.randint(0,100) < 60:
             t.forward(length)
             
         if ch == "0":                                   # лист
@@ -96,7 +96,7 @@ def draw_tree():
                 t.pencolor("#20BB00")
             t.forward(length - 2)
             t.pensize(array_thickness.pop())
-            t.pencolor("black")
+            t.pencolor("#000000")
             
         if ch == "[":                       # запоминаем данные перед поворотом налево
             thickness = thickness * 3/4  
@@ -116,7 +116,7 @@ def draw_tree():
             t.setheading(angle.pop())
             t.right(alpha + random.randint(-13, 13))
 #============================================================
-for _ in range(10):
+for _ in range(15): # презентация деревьев :)
     draw_tree()
     t.update()
     t.clear()
@@ -124,12 +124,3 @@ for _ in range(10):
     t.goto(0,-350)
     t.pendown()
     time.sleep(2)
-
-
-            
-            
-            
-        
-        
-
-    
