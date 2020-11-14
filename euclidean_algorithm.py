@@ -55,7 +55,7 @@ def linear_representation(a,b):
         else:
             result = array2[i]
             break
-    print
+    
     if flag1: result[0] *= -1
     if flag2: result[1] *= -1
     if flag3:
