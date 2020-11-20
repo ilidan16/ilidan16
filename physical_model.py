@@ -43,7 +43,7 @@ class Ball(Body):
 #--------------------------------------------------------
 ball = Ball(90,1,0.2)
 
-T = 15
+T = 10
 for t in np.r_[0:T:MODEL_DT]:
     ball.advance()
 

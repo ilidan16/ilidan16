@@ -72,14 +72,6 @@ def linear_representation(a, b):
         result[1] = w
     return result
 #=======================================================
-print(gcd(1001,112))
-print(gcd(-1001,-112))
-print(gcd(0,-112))
-print(gcd(0,0))
-print(linear_representation(1001,112))
-print(linear_representation(-1001,-112))
-print(linear_representation(-1001,0))
-print(linear_representation(0,0))
 
 
 
