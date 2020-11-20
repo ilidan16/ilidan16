@@ -1,12 +1,17 @@
-"""Алгоритм Евклида (простой)"""
 #=======================================================
-def gcd(a,b):
-    if a < 0: a *= -1         
-    if b < 0: b *= -1  
-    if a == 0 and b != 0: return b  
-    if b == 0 and a != 0: return a
-    if a == 0 and b == 0: return 0  
-       
+"""Алгоритм Евклида (простой)"""
+def gcd(a, b):
+    if a < 0:
+        a *= -1
+    if b < 0:
+        b *= -1
+    if a == 0 and b != 0:
+        return b
+    if b == 0 and a != 0:
+        return a
+    if a == 0 and b == 0:
+        return 0
+
     r = int
     while r != 0:
         if a < b:
@@ -18,10 +23,13 @@ def gcd(a,b):
     return b
 #=======================================================
 """Алгоритм Евклида (расширенный)"""
-def linear_representation(a,b):
-    if a == 0 and b != 0: return [0,1]  
-    if b == 0 and a != 0: return [1,0]
-    if a == 0 and b == 0: return [0,0] 
+def linear_representation(a, b):
+    if a == 0 and b != 0:
+        return [0, 1]
+    if b == 0 and a != 0:
+        return [1, 0]
+    if a == 0 and b == 0:
+        return [0, 0]
 
     flag1 = False
     flag2 = False
@@ -40,8 +48,8 @@ def linear_representation(a,b):
 
     
     i = 1
-    array1 = [a,b]          #Далее первое число массива будет означать
-    array2 = [[1,0],[0,1]]  #коэффициент перед a, второе - перед b"""
+    array1 = [a, b]          #Далее первое число массива будет означать
+    array2 = [[1, 0],[0, 1]]  #коэффициент перед a, второе - перед b"""
     while True:
         array1.append(array1[i-1] % array1[i])
         q = array1[i-1] // array1[i]
@@ -53,9 +61,11 @@ def linear_representation(a,b):
         else:
             result = array2[i]
             break
-    
-    if flag1: result[0] *= -1
-    if flag2: result[1] *= -1
+
+    if flag1:
+        result[0] *= -1
+    if flag2:
+        result[1] *= -1
     if flag3:
         w = result[0]
         result[0] = array2[1]
@@ -70,8 +80,8 @@ print(linear_representation(1001,112))
 print(linear_representation(-1001,-112))
 print(linear_representation(-1001,0))
 print(linear_representation(0,0))
-            
-    
 
-        
+
+
+
         
