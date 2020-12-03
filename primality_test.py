@@ -1,5 +1,6 @@
 import math
 import random
+import time
 
 #================================================================
 def primes(n):
@@ -32,10 +33,28 @@ def primality_test(z):
 
     return True
 #================================================================
-for _ in range(10):
-    z = random.randint(1, 10000)
-    print(z, primality_test(z))   
-
+def primality_test_fermat(z, iter=25):
+    """Вероятностая проверка на простоту с помощью малой теоремы Ферма"""
+    if z == 1: return []
+    if z == 2: return True
+    for _ in range(iter):
+        a = random.randint(2,z-1)
+        if a**(z-1) % z != 1:
+            return False
+    return True
+#================================================================
+def primality_test_2_0(z):
+    if primality_test_fermat(z):
+        if primality_test(z):
+            return True
+        else:
+            return False
+    else:
+        return False
+#================================================================
+z = random.randint(2,10000)
+print(z, primality_test_2_0(z))
+print(561, primality_test_2_0(561))
 
             
     
