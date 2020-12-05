@@ -33,7 +33,6 @@ class Matrix():
             raise MatrixError('Матрицы имеют разный размер')
         matrix1 = self.matrix.copy()
         matrix_other = other.matrix.copy()
-        print(matrix1)
         m = self.m
         n = self.n
         null_matrix = create_null_matrix(m,n)
