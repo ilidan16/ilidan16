@@ -2,14 +2,7 @@ class MatrixError(ValueError):
     pass
 
 def create_null_matrix(m,n):
-    '''Создаёт нулевую матрицу размером m x n'''
-    strings = []
-    null_matrix = []
-    for j in range(n):
-        strings.append(0)
-    for i in range(m):
-        null_matrix.append(strings)
-    return Matrix(null_matrix)
+    return Matrix([[0]*n for _ in range(m)])
 #==============================================================
 class Matrix():
     ''' Класс матриц размером m x n'''
@@ -53,22 +46,42 @@ class Matrix():
                 for k, p in zip(left_matrix_copy[i], column):
                     result[i][j] += k*p     
         return Matrix(result)
-        
-        
 
-
-
-
-
+    def transpose(self):
+        '''Транспонирование матрицы'''
+        copy = self.body.copy()
+        result = create_null_matrix(self.m,self.n).body
+        for i in range(self.m):
+            for j in range(self.n):
+                result[i][j] = copy[j][i]
+        return Matrix(result)
+#==============================================================
 A = Matrix([
     [5,3,6],
     [4,2,1],
-    [2,5,9]
+    [2,5,2]
     ])
 
-B = Matrix([
+E = Matrix([
     [1,0,0],
     [0,1,0],
     [0,0,1]
     ])
+
+C = Matrix([
+    [0,1,2],
+    [0,0,3],
+    [0,0,0]
+    ])
+
+B = Matrix([
+    [1,2,1],
+    [3,1,5],
+    [3,4,1]
+    ])
+
+print(A+B+C+E)
+print(A*B)
+print(A*E)
+print(C.transpose())
         
