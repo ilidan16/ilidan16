@@ -153,7 +153,7 @@
 		4& $ 194,35\pm0,01 $& $  3,7 \pm0,08$
 	\end{tabular}\\
 
-\item С помощью метода наименьших квадратов экстраполируем $m_0$:
+\item С помощью метода наименьших квадратов находим $m_0$:
 $$ f(k, b)=\left( \varepsilon_1-(km_1+b)\right) ^2+\left( \varepsilon_2-(km_2+b)\right) ^2+\left( \varepsilon_3-(km_3+b)\right) ^2+\left( \varepsilon_4-(km_4+b)\right) ^2$$
 \begin{equation*}
 	\begin{cases}
@@ -184,13 +184,30 @@ $$ f(k, b)=\left( \varepsilon_1-(km_1+b)\right) ^2+\left( \varepsilon_2-(km_2+b)
 \end{cases}
 \end{equation*}
 
+\begin{figure}[htb]
+	\centering
+	\caption{Экстраполяция зависимости $\varepsilon(m)$}
+\begin{tikzpicture}
+	\begin{axis} [legend pos = north west, xlabel=$m{,}\;\mbox{кг}$, ylabel=$\varepsilon(m){,}\quad\mbox{с}^{-2}$]
+		
+		\legend{,$18.5297x + 0.15652$}
+		\addplot [mark = *,only marks] coordinates {
+			(0.04645,1) 
+			(0.09575,1.94) 
+			(0.14505,2.91) 	
+			(0.19435,3.7)		
+		};
+	\addplot [draw=red][domain=0:0.2]{18.5297*x + 0.15652};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+
 $$ m_0=-\frac{b}{k}$$
-
-
 
  \begin{equation*}
 	\fbox{$ m_0= ({-}0,008\pm0,018)\;\mbox{кг}$}
 \end{equation*}
+
 \end{itemize}
 \end{itemize}
 
