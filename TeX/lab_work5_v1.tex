@@ -13,6 +13,7 @@
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 \usepackage{pgfplots}
+\usepackage{tikz}
 
 
 \begin{document}
@@ -63,15 +64,43 @@
 \begin{equation}
 	\Delta \varepsilon=\sqrt{\frac{16}{D^2t^4}\Delta x^2+\frac{16x^2}{D^4t^4}\Delta D^2+\frac{64x^2}{D^2t^6}\Delta t^2}
 \end{equation}
-где $D$ - диаметр шкива; $x$ - высота, с которой спускается груз; $ t $ -время спуска груза; $m$ - масса груза; $m_0$ - масса груза, которая компенсирует момент силы трения (определяется косвенно)
 
+\begin{equation}
+	M_{\mbox{сопр.}}=\frac{m_0gD}{2}
+\end{equation}
+
+\begin{equation}
+	I=\tilde{I}+4\overline{m}_1r^2
+\end{equation}
+где $\tilde{I}$ - момент инерции барабана; $D$ - диаметр шкива; $x$ - высота, с которой спускается груз; $ t $ -время спуска груза; $m$ - масса спускаемого груза; $m_0$~-~масса груза, которая компенсирует момент силы трения (определяется косвенно)
+
+
+
+\begin{table}[h]
+	\caption{\bf Измерительные приборы}
+	\begin{tabular}[c]{|p{7.5em}|p{7.5em}|p{7.5em}| p{7.5em}|}
+		\hline
+		Наименование & Тип прибора & Используемый диапазон & Погрешность прибора\\\hline
+		Линейка & Аналоговый & $5 - 60\quad\mbox{см}$ & 0,1 см\\
+		\hline
+		Штангенциркуль& Цифровой&$50-70\quad\mbox{мм}$&0,02 мм\\
+		\hline
+		Электронные весы& Цифровой & $1 - 150\quad\mbox{г}$ & 0,01 г \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[htb]
+	\caption{\bf Схема установки}
+	\centering \includegraphics[scale=0.5]{схема}
+\end{figure}
 
 
 \paragraph{Результаты прямых измерений и их обработки.}
 \begin{itemize}
 	\item $ D=63,37\;\mbox{мм} $
 	\item $ x=45,5\;\mbox{см} $
-	\item Средняя масса грузов, которые крепятся на стержни:\\
+	\item Средняя масса грузов, которые крепятся на стержнях:\\
 	$ \overline{m}_1 = 115,16\;\mbox{г}$
 	\item Маятник без грузов на стержнях
 	
@@ -93,13 +122,13 @@
 
 	$r$, см&$m$, г& $t$, с \\
 	\hline
-	27,75&95,75  &6,941  \\
-	22,75&95,75  &6,142  \\
-	17,75&95,75  &5,063  \\
+	27&95,75  &6,941  \\
+	22&95,75  &6,142  \\
+	17&95,75  &5,063  \\
 	
 \end{tabular}
 
-где $m$ - масса спускаемого груза
+
 \end{itemize}
 
 \paragraph{Погрешности измерений.}
@@ -108,7 +137,7 @@
 	\item $\Delta t = 0,001\;\mbox{c}$
 	\item $\Delta x = 1\;\mbox{см}$
 	\item $\Delta D = 0,02\;\mbox{мм}$
-	\item $\Delta r = 0,5\;\mbox{см}$
+	\item $\Delta r = 1\;\mbox{см}$
 \end{itemize}
 
 \paragraph{Расчет результатов косвенных измерений.}
@@ -118,14 +147,14 @@
 	
 	
 \begin{itemize}
-	\item Пользуясь \hyperlink{formuls}{формулой (2)} находим $\varepsilon$:
+	\item Пользуясь \hyperlink{formuls}{формулой (2)}, находим $\varepsilon$:
 	
 	$$\varepsilon_1=\frac{4\cdot0,455}{63,37\cdot10^{-3}\cdot(5,356)^2}\approx1\;\left( \mbox{с}^{-2} \right) $$
 	$$\varepsilon_2=\frac{4\cdot0,455}{63,37\cdot10^{-3}\cdot(3,847)^2}\approx1,94\;\left( \mbox{с}^{-2} \right) $$
 	$$\varepsilon_3=\frac{4\cdot0,455}{63,37\cdot10^{-3}\cdot(3,140)^2}\approx2,91\;\left( \mbox{с}^{-2} \right) $$
 	$$\varepsilon_4=\frac{4\cdot0,455}{63,37\cdot10^{-3}\cdot(2,785)^2}\approx3,7\;\left( \mbox{с}^{-2} \right) $$
 
-	\item Пользуясь \hyperlink{formuls}{формулой (3)} находим погрешность $\Delta \varepsilon$:
+	\item Пользуясь \hyperlink{formuls}{формулой (3)}, находим погрешность $\Delta \varepsilon$:
 	
 	\begin{tabular}{c|c}
 		№ & $\Delta \varepsilon,\;\mbox{c}^{-2}$ \\
@@ -144,13 +173,13 @@
 	\begin{tabular}{ c | c | c}
 		№	& $m$, г& $\varepsilon$, $\mbox{с}^{-2}$ \\
 		\hline
-		1 & $46,45\pm0,01 $ &  $  1\pm0,02  $\\
+		1 & $46,45\pm0,01 $ &  $  1,00\pm0,02  $\\
 		
 		2& $ 95,75\pm0,01$ & $ 1,94\pm0,04  $ \\
 		
 		3& $145,05 \pm0,01 $&  $ 2,91 \pm0,06 $\\
 		
-		4& $ 194,35\pm0,01 $& $  3,7 \pm0,08$
+		4& $ 194,35\pm0,01 $& $  3,70 \pm0,08$
 	\end{tabular}\\
 
 \item С помощью метода наименьших квадратов находим $m_0$:
@@ -180,24 +209,24 @@ $$ f(k, b)=\left( \varepsilon_1-(km_1+b)\right) ^2+\left( \varepsilon_2-(km_2+b)
 \begin{equation*}
 	\begin{cases}
 	k = 18,5297\pm2,3345\\
-	b=0,15652\pm0,32460
+	b=0,1565\pm0,3246
 \end{cases}
 \end{equation*}
 
-\begin{figure}[htb]
+\begin{figure}[!htb]
 	\centering
 	\caption{Экстраполяция зависимости $\varepsilon(m)$}
 \begin{tikzpicture}
 	\begin{axis} [legend pos = north west, xlabel=$m{,}\;\mbox{кг}$, ylabel=$\varepsilon(m){,}\quad\mbox{с}^{-2}$]
 		
-		\legend{,$18.5297x + 0.15652$}
+		\legend{,$18.5297x + 0.1565$}
 		\addplot [mark = *,only marks] coordinates {
 			(0.04645,1) 
 			(0.09575,1.94) 
 			(0.14505,2.91) 	
 			(0.19435,3.7)		
 		};
-	\addplot [draw=red][domain=0:0.2]{18.5297*x + 0.15652};
+	\addplot [draw=red][domain=0:0.2]{18.5297*x + 0.1565};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -205,15 +234,100 @@ $$ f(k, b)=\left( \varepsilon_1-(km_1+b)\right) ^2+\left( \varepsilon_2-(km_2+b)
 $$ m_0=-\frac{b}{k}$$
 
  \begin{equation*}
-	\fbox{$ m_0= ({-}0,008\pm0,018)\;\mbox{кг}$}
+	\fbox{$ m_0= ({-}8\pm18)\cdot10^{-3}\;\mbox{кг}$}
 \end{equation*}
+По \hyperlink{formuls}{формуле (4)}:\\
 
+$M_{\mbox{сопр.}}= ({-}2\pm6)\cdot10^3\;\mbox{Н}$
+\end{itemize}
+\item {\bf Момент инерции барабана $\tilde{I}$} \hyperlink{formuls}{(1)}:\\
+
+\begin{tabular}{c|c||c||}
+	
+	$m$, г& $t$, с &$\tilde I{,}\;\mbox{кг}\cdot\mbox{м}^2$\\
+	\hline
+	46,45& 5,356& $(17\pm6)\cdot10^{-3}$\\
+	
+	95,75& 3,847 &$(17\pm3)\cdot10^{-3}$\\
+	
+	145,05& 3,140& $(16\pm2)\cdot10^{-3}$\\
+	
+	194,35& 2,785& $(17\pm2)\cdot10^{-3}$\\
+\end{tabular}
+
+$\tilde{I}\approx(17\pm6)\cdot10^{-3}\;\mbox{кг}\cdot\mbox{м}^2$
+
+\item {\bf Момент инерции маятника}
+\begin{itemize}
+	\item Момент инерции маятника по \hyperlink{formuls}{формуле (5)}:\\
+	
+Таблица 2\\
+	\begin{tabular}{|c|c|}
+		\hline
+		$r$, см&  $I{,}\;\mbox{кг}\cdot\mbox{м}^2$\\
+		\hline
+		27& $(5\pm0,8)\cdot10^{-2}$ \\
+		
+		22&  $(4\pm0,8)\cdot10^{-2}$\\
+	
+		17&  $(3\pm0,8)\cdot10^{-2}$\\
+		\hline
+	\end{tabular}\\
+
+	\item Момент инерции маятника по \hyperlink{formuls}{формуле (1)}\\
+
+Таблица 3\\
+	\begin{tabular}{|c|c|}
+		\hline
+		$r$, см&  $I{,}\;\mbox{кг}\cdot\mbox{м}^2$\\
+		\hline
+		27& $ (5,4\pm0,8)\cdot10^{-2}$ \\
+		
+		22&  $ (4,2\pm0,7)\cdot10^{-2}$\\
+		
+		17&  $ (2,9\pm0,5)\cdot10^{-2}$\\
+		\hline
+	\end{tabular}
 \end{itemize}
 \end{itemize}
 
+\paragraph{Окончательные результаты.}
 
+
+\begin{flushleft}
+\begin{tikzpicture}[scale=0.95]
+	\begin{scope}
+	
+		\begin{axis}[ legend pos = north west, minor tick num = 1, grid=major,ymin=0,xmin=15,xmax=28, ymax=12,xlabel=$r{,}\;\mbox{см}$, ylabel=$I{,}\;\mbox{кг}\cdot\mbox{м}^2\cdot10^{-2}$]
+			\legend{Таблица 2}
+			\addplot [ only marks, mark=*, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error=y-err]{%
+				x y y-err
+				27 5 0.8
+				22 4 0.8
+				17 3 0.8
+			};
+		\end{axis}
+	\end{scope}
+
+\begin{scope}[xshift=9cm]
+	\begin{axis}[ legend pos = north west, minor tick num = 1, grid=major, ymin=0,xmin=15,xmax=28, ymax=12,xlabel=$r{,}\;\mbox{см}$,ylabel=$I{,}\;\mbox{кг}\cdot\mbox{м}^2\cdot10^{-2}$]
+		\legend{Таблица 3}
+		\addplot [ only marks, mark=*, error bars/.cd, y dir=both, y explicit]
+		table [x=x, y=y, y error=y-err]{%
+			x y y-err
+			27 5.4 0.8
+			22 4.2 0.7
+			17 2.9 0.5
+		};
+	\end{axis}
+	\end{scope}
+\end{tikzpicture}
+\end{flushleft}
+
+\paragraph{Выводы и анализ результатов}
+Мы измерили момент инерции маятника Обербека двумя способами.
 \end{document}
-
 
 
 
