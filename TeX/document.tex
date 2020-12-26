@@ -1,19 +1,18 @@
 \documentclass{article}
 
+
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage[pdftex]{graphicx}
+\usepackage[unicode, colorlinks, linkcolor=blue]{hyperref}
 \graphicspath{{pictures/}}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 
-
-
-
 \begin{document}
 	\begin{figure}[!]
-\centering{\includegraphics[scale=0.25]{a}}\\
+\centering{\includegraphics[scale=0.25]{AU}}\\
 {\Large\bfseries Санкт-Петербургский национальный исследовательский Академический университет имени Ж.И.~Алфёрова Российской академии наук}
 \end{figure}
 \begin{center}
@@ -48,9 +47,9 @@
 
 
 
- \paragraph{Рабочие формулы и исходные данные.}
-$$g_1=4\pi^2\frac{l}{T^2}\eqno (1)$$
-$$g_2=4\pi^2\frac{a_1^2-a_2^2}{T_1^2a_1-T_2^2a_2}\eqno (2)$$
+ \paragraph{Рабочие формулы и исходные данные.}\hypertarget{formula}{}
+$$g_2=4\pi^2\frac{l}{T^2}\eqno(2)$$
+$$g_1=4\pi^2\frac{a_1^2-a_2^2}{T_1^2a_1-T_2^2a_2}\eqno(1)$$
 где $ a_1 $ и $ a_2 $ расстояния от центра масс до 1-го и 2-го подвеса, соответственно 
 Формула (1) для математического маятника, (2) - для оборотного\\
 
@@ -80,8 +79,8 @@ $$g_2=4\pi^2\frac{a_1^2-a_2^2}{T_1^2a_1-T_2^2a_2}\eqno (2)$$
 \paragraph{Результаты прямых измерений и их обработки }
 \begin{enumerate}
 	\item Центр масс\\
-	$ a_1 = 14 $ см.\\
-	$ a_2 = 8$ см.
+	$ a_1 = 8 $ см.\\
+	$ a_2 = 14$ см.
 	
 \item Оборотный маятник в первой точке подвеса\\
 \begin{table}[!h]	
@@ -140,21 +139,23 @@ $$T_2\approx\frac{<t_2>}{N}\approx 1{,}0110\quad(\mbox{c})  $$
 \item Период колебания математического маятника
 $$T\approx\frac{<t>}{N}\approx 0{,}9913\quad(\mbox{c})  $$
 \item Ускорение свободного падения $g_1$\\
-По формуле (1):
+\hyperlink{formula}{По формуле (1):}
 
-$$ g_1=4\pi^2\,\frac{0,22}{0,9913^2}\approx8,8\quad\left(\frac{\mbox{м}}{\mbox{с}^2}\right)$$
+$$ g_1 = 4\pi^2\,\frac{0,08^2-0,14^2}{0,08\cdot1,071^2-0,14\cdot1,011^2}\approx10,2 \quad\left(\frac{\mbox{м}}{\mbox{с}^2}\right)$$
 \begin{center}
-	\fbox{$g_1\approx 8,8\quad\left(\frac{\mbox{м}}{\mbox{с}^2}\right)$}
+	\fbox{$ g_1\approx 10,2\quad\left(\frac{\mbox{м}}{\mbox{с}^2}\right) $}
 \end{center}
-
 
 \item Ускорение свободного падения $g_2$\\
-По формуле (2):
+\hyperlink{formula}{По формуле (2):}
 
-$$ g_2 = 4\pi^2\,\frac{0,14^2-0,08^2}{0,14\cdot1,071^2-0,08\cdot1,011^2}\approx6,6 \quad\left(\frac{\mbox{м}}{\mbox{с}^2}\right)$$
+$$ g_2=4\pi^2\,\frac{0,22}{0,9913^2}\approx8,8\quad\left(\frac{\mbox{м}}{\mbox{с}^2}\right)$$
 \begin{center}
-\fbox{$ g_2\approx 6,6\quad\left(\frac{\mbox{м}}{\mbox{с}^2}\right) $}
+	\fbox{$g_2\approx 8,8\quad\left(\frac{\mbox{м}}{\mbox{с}^2}\right)$}
 \end{center}
+
+
+
 \end{enumerate}
 
 \paragraph{Расчет погрешностей измерений }
@@ -176,10 +177,9 @@ $$ g_2 = 4\pi^2\,\frac{0,14^2-0,08^2}{0,14\cdot1,071^2-0,08\cdot1,011^2}\approx6
 \end{enumerate}
 
 \paragraph{Окончательные результаты.}
-$$ g_1=(6,6\pm0,1)\quad\frac{\mbox{м}}{\mbox{с}^2}$$
+$$ g_1=(10,2\pm0,1)\quad\frac{\mbox{м}}{\mbox{с}^2}$$
 $$ g_2=(8,8\pm0,2)\quad\frac{\mbox{м}}{\mbox{с}^2}$$
 
 \paragraph{Выводы и анализ результатов}
 Мы вычислили ускорение свободного падения с помощью двух маятников: математического и оборотного. Полученные результаты довольно сильно отличаются, данную ситуацию можно объяснить тем, что, несмотря на довольно точное измерение периода, в первом случае были трудности с измерением центра масс, а во втором - с измерением длины маятника.
-
 \end{document}
