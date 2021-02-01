@@ -8,7 +8,7 @@ ymin = -2
 ymax = 2
 m, n = 1000, 1000
 itr = 300
-border = 3.0
+border = 2.0
 #===================================================
 
 def mandelbrot(xmin, xmax, ymin, ymax, m, n, itr, border):
