@@ -1,30 +1,29 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
-import numpy as np
+#===================================================
 
 xmin, xmax, ymin, ymax = -2.5, 1.5, -2, 2
-m, n = 600, 600
-itr = 100
+m, n = 1000, 1000
+itr = 300
 border = 2.0
+#===================================================
 
-image = np.zeros((m, n))
+def mandelbrot(xmin, xmax, ymin, ymax, m, n, itr, border):
+    image = np.zeros((m, n))
+    x, y = np.mgrid[xmin:xmax:(n*1j), ymin:ymax:(m*1j)]
+    c = x + 1j * y
+    z = np.zeros_like(c)
+    for k in range(itr):
+        z = z * z + c
+        mask = (np.abs(z) > border) & (image == 0)
+        image[mask] = k
+        z[mask] = np.nan
 
-
-for iw, w in enumerate(np.linspace(xmin, xmax, n)):
-    for ie, e in enumerate(np.linspace(ymin, ymax, m)):
-        c = w + 1j * e
-
-        z = 0
-        for k in range(itr):
-            z = z*z + c
-
-            if abs(z) > border:
-                image[iw, ie] = k
-                break
-
+    return -image.T
+#===================================================    
+plt.figure(figsize=(8, 8))
+image = mandelbrot(xmin, xmax, ymin, ymax, m, n, itr, border)
 plt.xticks([])
 plt.yticks([])
-
-plt.imshow(-image.T, cmap='flag')
+plt.imshow(image, cmap='flag', interpolation='none')
 plt.show()
