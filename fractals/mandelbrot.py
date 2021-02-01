@@ -2,10 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 #===================================================
 
-xmin, xmax, ymin, ymax = -2.5, 1.5, -2, 2
+xmin = -2.5
+xmax = 1.5
+ymin = -2
+ymax = 2
 m, n = 1000, 1000
 itr = 300
-border = 2.0
+border = 3.0
 #===================================================
 
 def mandelbrot(xmin, xmax, ymin, ymax, m, n, itr, border):
