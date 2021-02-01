@@ -20,7 +20,8 @@ def mandelbrot(xmin, xmax, ymin, ymax, m, n, itr, border):
         z[mask] = np.nan
 
     return -image.T
-#===================================================    
+#===================================================
+
 plt.figure(figsize=(8, 8))
 image = mandelbrot(xmin, xmax, ymin, ymax, m, n, itr, border)
 plt.xticks([])
