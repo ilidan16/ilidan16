@@ -6,6 +6,19 @@ xmin = -2.5
 xmax = 1.5
 ymin = -2
 ymax = 2
+"""
+https://mandel.gart.nz/
+
+x = -1.884926904
+y = 0
+zoom = 537892464573
+d = 1600/zoom
+xmin = x-d/2
+xmax = x+d/2
+ymin = y-d/2
+ymax = y+d/2
+"""
+
 m, n = 1000, 1000
 itr = 300
 border = 2.0
