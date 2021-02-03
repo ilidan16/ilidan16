@@ -1,26 +1,26 @@
 import numpy as np
 import matplotlib.pyplot as plt
 #===================================================
-
+"""
 xmin = -2.5
 xmax = 1.5
 ymin = -2
 ymax = 2
 """
-https://mandel.gart.nz/
+# https://mandel.gart.nz/
 
-x = -1.884926904
-y = 0
-zoom = 537892464573
+x = -1.748187465
+y = 0.001251896
+zoom = 711920010
 d = 1600/zoom
 xmin = x-d/2
 xmax = x+d/2
 ymin = y-d/2
 ymax = y+d/2
-"""
+
 
 m, n = 1000, 1000
-itr = 300
+itr = 500
 border = 2.0
 #===================================================
 
