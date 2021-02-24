@@ -32,12 +32,20 @@
 %-----------------------------------------------------------------------------
 
 \paragraph{Цель работы.}
+Определение средней длины свободного пробега молекул воздуха; определение эффективного диаметра молекул воздуха
 
 \paragraph{Задачи, решаемые при выполнении работы.}
+\begin{enumerate}
+	\item Узнать температуру в помещении и атмосферное давление в данный момент времени
+	\item Измерить нужное для посчетов время, за которое в мензурку поступало 100мл воды
+	\item Измерить разницу высот жидкости в колбе до и после спучка воды
+\end{enumerate}
 
 \paragraph{Объект исследования.}
+Молекулы воздуха
 
 \paragraph{Метод экспериментального исследования.}
+Измерение времени и уровней жидкости в колбе
 
  \paragraph{Рабочие формулы и исходные данные.}\hypertarget{formuls}{}
  \begin{equation}
@@ -45,6 +53,52 @@
  \end{equation}
 
 \begin{equation}
-	4
+	d=\sqrt{\frac{kT}{\sqrt{2}\pi <\lambda>P}}
 \end{equation}
+
+\begin{equation}
+	\Delta P=\rho g\, \frac{h_1+h_2}{2}
+\end{equation}
+
+\begin{equation}
+	\varepsilon=\frac{\Delta \rho}{\rho}+\frac{\Delta g}{g}+\frac{\Delta h_1+\Delta h_2}{h_1+h_2}+\frac{\Delta \tau}{\tau}+\frac{\Delta V}{V}
+\end{equation}
+
+\paragraph{Результаты прямых измерений и их обработки.}
+\begin{itemize}
+	\item $T=288\;\mbox{K}$
+	\item$P=766\;\mbox{мм рт. ст.}$
+	\begin{table}[htb]
+	\begin{tabular}{c|c|c|c}
+		$h_1$,  см & $h_2$,  см & V,  мл & $\tau$,  с \\
+		\hline
+		6,7 & 5,4 & 100 & 115 \\
+	
+		6,7 & 5,4 & 100 & 112 \\
+	
+		6,7 & 5,4 & 100 & 115 \\
+	
+	\end{tabular}
+\end{table}
+\end{itemize}
+
+\paragraph{Расчет результатов косвенных измерений.}
+\begin{itemize}
+	\item По формуле \hyperlink{formuls}{(3)} находим разность давлений:
+	$$ \Delta P=1000\cdot9,8\cdot\frac{6,7\cdot10^{-2}-5,4\cdot10^{-2}}{2}=592,9\;\mbox{(Па)}$$
+	\item Среднее время $<\tau>$:
+	$$<\tau>=\frac{115+112+115}{3}=114\;\mbox{(c)}$$
+	\item Средняя длина $<\lambda>$ свободного пробега молекул воздуха \hyperlink{formuls}{(1)}:
+	$$<\lambda>=\frac{3\cdot3,14\cdot(0,5\cdot10^{-3})^4}{16\cdot0,4\cdot766\cdot133,3}\cdot\sqrt{\frac{3,14\cdot8,31\cdot301}{2\cdot29\cdot10^{-3}}}\cdot\frac{592,9\cdot114}{100\cdot10^{-6}}\approx2,24\cdot10^{-7}\;\mbox{(м)}$$
+	\item Эффективный диаметр молекул \hyperlink{formuls}{(2)}:
+	$$d=\sqrt{\frac{1,38\cdot10^{-23}\cdot301}{\sqrt{2}\cdot3,14\cdot2,24\cdot10^{-7}\cdot766\cdot133,3}}\approx2,02\cdot10^{-10}\;\mbox{(м)}$$
+\end{itemize}
+
+\paragraph{Погрешность измерений}
+\begin{itemize}
+\item
+$\Delta\rho=5\;\frac{\mbox{кг}}{\mbox{м}^3}$
+%$\Delta g=0,1\;\frac{\mbox{м}}{\mbox{с}^2}$
+
+\end{itemize}
 \end{document}
