@@ -1,3 +1,4 @@
+import time
 import numpy as np
 import matplotlib.pyplot as plt
 from itertools import cycle
@@ -48,7 +49,9 @@ cmap='flag'
 """
 
 plt.figure(figsize=(8, 8))
+t0 = time.time()
 image = mandelbrot(xmin, xmax, ymin, ymax, m, n, itr, border)
+print(time.time() - t0)
 plt.xticks([])
 plt.yticks([])
 plt.imshow(image, cmap=cmap)
