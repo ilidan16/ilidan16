@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from itertools import cycle
 import matplotlib.colors as clr
+
+import multiprocessing
 #===================================================
 # https://mandel.gart.nz/
 x = -1.748187465
@@ -48,11 +50,16 @@ cmap = clr.LinearSegmentedColormap.from_list('mycmap',
 cmap='flag'
 """
 
-plt.figure(figsize=(8, 8))
 t0 = time.time()
 image = mandelbrot(xmin, xmax, ymin, ymax, m, n, itr, border)
 print(time.time() - t0)
+
+"""
+plt.figure(figsize=(8, 8))
 plt.xticks([])
 plt.yticks([])
 plt.imshow(image, cmap=cmap)
 plt.show()
+"""
+
+
