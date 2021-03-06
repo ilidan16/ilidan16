@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from itertools import cycle
 import matplotlib.colors as clr
 
-from multiprocessing import Process
+from threading import Thread
 #===================================================
 # https://mandel.gart.nz/
 """
@@ -28,6 +28,7 @@ n = 10
 itr = 200
 border = 2.0
 #===================================================
+image = np.zeros((10, 10))
 image1 = np.zeros((m, int(n/2)))
 image2 = np.zeros((m, int(n/2)))
 def mandelbrot(xmin,xmax,m,n,image_i, ymin=ymin, ymax=ymax, itr=itr, border=border):
@@ -41,26 +42,25 @@ def mandelbrot(xmin,xmax,m,n,image_i, ymin=ymin, ymax=ymax, itr=itr, border=bord
                 if abs(z) > border:
                     image[i_x,i_y] = k
                     break
-                print(image1)
 #===================================================
 half_x = (xmin + xmax)/2
 
 t0 = time.time()
 if __name__ == '__main__':
-    p1 = Process(target=mandelbrot, args=(xmin, half_x, m, int(n/2), image1))
-    p2 = Process(target=mandelbrot, args=(half_x, xmax, m, int(n/2), image2))
+    t1 = Thread(target=mandelbrot, args=(xmin, half_x, m, int(n/2), image1))
+    t2 = Thread(target=mandelbrot, args=(half_x, xmax, m, int(n/2), image2))
     
-    p1.start()
-    p2.start()
-    
-    p1.join()
-    p2.join()
+    t1.start()
+    t2.start()
+
+    t1.join()
+    t2.join()
 print(time.time() - t0)
 
-#print(image1)
-#print(image2)
-image = np.concatenate((image1,image2), axis=1)
+print(image1)
+print(image2)
+#image = np.concatenate((image1,image2), axis=1)
 #print(image)
 
-
+#mandelbrot(xmin,xmax,m,n,image, ymin=ymin, ymax=ymax, itr=itr, border=border)
 
