@@ -63,24 +63,8 @@ if __name__ == '__main__':
 full_image = np.concatenate((left_image, right_image), axis=1) #склеиваем
 print(time.time()-t0)
 
-t0 = time.time()
-image = np.zeros((m, n))
-mandelbrot(xmin,xmax,m,n,image,)
-print(time.time()-t0)
-
 plt.figure(figsize=(8, 8))
 plt.xticks([])
 plt.yticks([])
 plt.imshow(-full_image, cmap='flag')
 plt.show()
-
-
-"""
-image_s = np.zeros((m, n))
-mandelbrot(xmin,xmax,m,n,image_s, -2, 2, itr=itr, border=border)
-plt.figure(figsize=(8, 8))
-plt.xticks([])
-plt.yticks([])
-plt.imshow(-image_s, cmap='flag')
-plt.show()
-"""
