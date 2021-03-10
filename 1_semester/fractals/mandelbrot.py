@@ -54,12 +54,12 @@ t0 = time.time()
 image = mandelbrot(xmin, xmax, ymin, ymax, m, n, itr, border)
 print(time.time() - t0)
 
-"""
+
 plt.figure(figsize=(8, 8))
 plt.xticks([])
 plt.yticks([])
 plt.imshow(image, cmap=cmap)
 plt.show()
-"""
+
 
 
