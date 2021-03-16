@@ -89,8 +89,11 @@ $$x=\frac{\Delta T}{\Delta t}=\frac{x_1+x_2}{2}=0,0735\; \frac{^\circ\mbox{C}}{c
 
 
  \begin{tikzpicture}
- 	\begin{axis}[nodes near coords,enlargelimits=0.2,xlabel={Время $t$, c}, ylabel={Температура $ T{,}\;^{\circ}$C}]
- 		\addplot[black, point meta=explicit symbolic,mark=*, mark size=1pt, only marks] 
+ 	\begin{axis}[ymajorgrids,xmajorgrids,
+ 		minor tick num = 1,
+ 		nodes near coords,enlargelimits=0.2,
+ 		xlabel={Время $t$, c}, ylabel={Температура $ T{,}\;^{\circ}$C}]
+ 		\addplot[black, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks] 
  		coordinates {
  			(	0	,	191.6	)[$1^{'} $]
  			(	20	,	190.0	)
@@ -192,8 +195,8 @@ $$x=\frac{\Delta T}{\Delta t}=\frac{x_1+x_2}{2}=0,0735\; \frac{^\circ\mbox{C}}{c
  			(	1940	,	116.6	)[	$\;2^{'}  $]
  		};
  	\legend{,$ 190.6 - 0.077\;x $,$ 249.6 - 0.07\;x $};
- 	\addplot[red,point meta=explicit symbolic][domain=-70:270]{190.635 - 0.0771329*x};
- 	\addplot[blue,point meta=explicit symbolic][domain=1000:2000]{249.556 - 0.0697749*x};
+ 	\addplot[red,point meta=explicit symbolic,line width=0.9pt][domain=-70:270]{190.635 - 0.0771329*x};
+ 	\addplot[blue,point meta=explicit symbolic,line width=0.9pt][domain=1000:2000]{249.556 - 0.0697749*x};
  	\end{axis}
  \end{tikzpicture}\\
 
