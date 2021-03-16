@@ -60,24 +60,33 @@
  
  $ C_0 = 0,6\,C_{Sn}+0,4\,C_{Pb} = 188\; \frac{\mbox{Дж}}{\mbox{кг} \cdot \mbox{К}}$\\
  
-  Изменение энтропии:
- \begin{equation}
- 	S_2-S_1=\frac{\lambda M_0}{T}
- \end{equation}
 
- Удельная теплота кристаллизации сплава:
+
+ Удельная теплота кристаллизации сплава:\hypertarget{formul1}{}
  \begin{equation}
  	\lambda=\frac{C_0M_0+C_aM_a}{M_0}\;\frac{\Delta T}{\Delta t}\;\Delta t_k
  \end{equation}
 , где $ \frac{\Delta T}{\Delta t} $ - средняя скорость остывания сплава на участках \\
-$ 1^{'}\rightarrow1 $ и $ 2\rightarrow2^{'} $(Рис. 1); $ \Delta t_k $ - время кристаллизации сплава\\
+$ 1^{'}\rightarrow1 $ и $ 2\rightarrow2^{'} $(Рис. 1); $ \Delta t_k $ - время кристаллизации сплава.\\
 
-\textbf{Результаты прямых измерений и их обработки.}
-Результаты прямых измерений находятся в \hyperlink{table}{приложении}.\\
+  Изменение энтропии:\hypertarget{formul2}{}
+\begin{equation}
+	S_2-S_1=\frac{\lambda M_0}{T_k}
+\end{equation}
+
+\textbf{Прямые измерения.}
+
+Результаты прямых измерений находятся в \hyperlink{table}{приложении}. Из полученных данных находим:
 
 Время кристаллизации металла $ \Delta t_k= 960$ c.\\
 
 Температура  кристаллизации $ T_k=\frac{176,1+172,1}{2}=174,1\;(^{\circ}\mbox{C}) $\\
+
+Экстраполируя данные на отрезках $ [0,200] $ и $ [1160,1940] $, находим:
+$$ x_1 = \frac{\Delta T_1}{\Delta t_1}=0,077\; \frac{^\circ\mbox{C}}{c}$$
+$$ x_2 = \frac{\Delta T_2}{\Delta t_2}=0,07\; \frac{^\circ\mbox{C}}{c}$$
+$$x=\frac{\Delta T}{\Delta t}=\frac{x_1+x_2}{2}=0,0735\; \frac{^\circ\mbox{C}}{c}$$
+
 
  \begin{tikzpicture}
  	\begin{axis}[nodes near coords,enlargelimits=0.2,xlabel={Время $t$, c}, ylabel={Температура $ T{,}\;^{\circ}$C}]
@@ -182,13 +191,29 @@ $ 1^{'}\rightarrow1 $ и $ 2\rightarrow2^{'} $(Рис. 1); $ \Delta t_k $ - вр
  			(	1920	,	117.7	)
  			(	1940	,	116.6	)[	$\;2^{'}  $]
  		};
+ 	\legend{,$ 190.6 - 0.077\;x $,$ 249.6 - 0.07\;x $};
+ 	\addplot[red,point meta=explicit symbolic][domain=-70:270]{190.635 - 0.0771329*x};
+ 	\addplot[blue,point meta=explicit symbolic][domain=1000:2000]{249.556 - 0.0697749*x};
  	\end{axis}
- \end{tikzpicture}
+ \end{tikzpicture}\\
+
+\textbf{Расчет результатов косвенных измерений.}
+По формуле \hyperlink{formul1}{(1)} вычисляем удельную теплоту кристаллизации сплава:
+$$ \lambda=\frac{188\cdot120\cdot10^{-3} + 460\cdot0,5}{120\cdot10^{-3}}\cdot0,0735\cdot960=148505\;\left( \frac{\mbox{Дж}}{\mbox{кг}}\right)$$\\
+
+По формуле \hyperlink{formul2}{(2)} находим изменение энтропии:
+$$ S_2-S_1=\frac{148505\cdot120\cdot10^{-3}}{174,1+273}=39,8582\;\left( \frac{\mbox{Дж}}{\mbox{К}}\right)$$\\
+
+\textbf{Погрешность измерений.}
+$$\Delta T_k=\frac{T_1-T_2}{2}=\frac{176,1-172,1}{2}=2\;(^\circ\mbox{C})$$
+$$ \Delta x = \frac{\mid x_1-x_2\mid}{2}=\frac{0,077-0,07}{2}=0,0035\; \left( \frac{^\circ\mbox{C}}{c}\right) $$
+Относительная погрешность удельной теплоты кристаллизации:
+$$ \varepsilon\lambda = \sqrt{\left( \frac{\Delta T_k}{T_k}\right)^2  + \left(\frac{\Delta x}{x}\right)^2}$$
 
 
 
 \setlength\doublerulesep{0.7pt}\doublerulesepcolor{black}
-\begin{table}
+\begin{table}[htb]
 	\centering {\large\bfseries Приложение}\hypertarget{table}{}\\
 	\caption{Зависимость температуры от времени}
 	\begin{tabular}{c|c||c|c||c|c||c|c}
