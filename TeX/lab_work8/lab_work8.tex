@@ -17,6 +17,8 @@
 
 \usepackage{color,colortbl}
 
+\usepackage{wasysym}
+
 \begin{document}
 \selectlanguage{russian}
 	%----------------------------------Шапка------------------------------------
@@ -64,28 +66,27 @@
 
  Удельная теплота кристаллизации сплава:\hypertarget{formul1}{}
  \begin{equation}
- 	\lambda=\frac{C_0M_0+C_aM_a}{M_0}\;\frac{\Delta T}{\Delta t}\;\Delta t_k
+ 	\lambda=\frac{C_0M_0+C_aM_a}{M_0}\;\frac{\Delta T}{\Delta t}\; t_k
  \end{equation}
 , где $ \frac{\Delta T}{\Delta t} $ - средняя скорость остывания сплава на участках \\
-$ 1^{'}\rightarrow1 $ и $ 2\rightarrow2^{'} $(Рис. 1); $ \Delta t_k $ - время кристаллизации сплава.\\
+$ 1^{'}\rightarrow1 $ и $ 2\rightarrow2^{'} $(Рис. 1); $ t_k $ - время кристаллизации сплава.\\
 
   Изменение энтропии:\hypertarget{formul2}{}
 \begin{equation}
 	S_2-S_1=\frac{\lambda M_0}{T_k}
-\end{equation}
+\end{equation}\\
 
 \textbf{Прямые измерения.}
+Результаты прямых измерений находятся в \\ \hyperlink{table}{приложении}. Из полученных данных находим:
 
-Результаты прямых измерений находятся в \hyperlink{table}{приложении}. Из полученных данных находим:
-
-Время кристаллизации металла $ \Delta t_k= 960$ c.\\
+Время кристаллизации металла $ t_k= 960$ c.\\
 
 Температура  кристаллизации $ T_k=\frac{176,1+172,1}{2}=174,1\;(^{\circ}\mbox{C}) $\\
 
 Экстраполируя данные на отрезках $ [0,200] $ и $ [1160,1940] $, находим:
-$$ x_1 = \frac{\Delta T_1}{\Delta t_1}=0,077\; \frac{^\circ\mbox{C}}{c}$$
-$$ x_2 = \frac{\Delta T_2}{\Delta t_2}=0,07\; \frac{^\circ\mbox{C}}{c}$$
-$$x=\frac{\Delta T}{\Delta t}=\frac{x_1+x_2}{2}=0,0735\; \frac{^\circ\mbox{C}}{c}$$
+$$ x_1 = \frac{\Delta T_1}{\Delta t_1}=0,077\; \frac{^\circ\mbox{C}}{c}\;\left( \frac{\mbox{K}}{c}\right) $$
+$$ x_2 = \frac{\Delta T_2}{\Delta t_2}=0,07\; \frac{^\circ\mbox{C}}{c}\;\left( \frac{\mbox{K}}{c}\right)$$
+$$x=\frac{\Delta T}{\Delta t}=\frac{x_1+x_2}{2}=0,0735\; \frac{^\circ\mbox{C}}{c}\;\left( \frac{\mbox{K}}{c}\right)$$
 
 
  \begin{tikzpicture}
@@ -207,11 +208,25 @@ $$ \lambda=\frac{188\cdot120\cdot10^{-3} + 460\cdot0,5}{120\cdot10^{-3}}\cdot0,0
 По формуле \hyperlink{formul2}{(2)} находим изменение энтропии:
 $$ S_2-S_1=\frac{148505\cdot120\cdot10^{-3}}{174,1+273}=39,8582\;\left( \frac{\mbox{Дж}}{\mbox{К}}\right)$$\\
 
+
 \textbf{Погрешность измерений.}
-$$\Delta T_k=\frac{T_1-T_2}{2}=\frac{176,1-172,1}{2}=2\;(^\circ\mbox{C})$$
-$$ \Delta x = \frac{\mid x_1-x_2\mid}{2}=\frac{0,077-0,07}{2}=0,0035\; \left( \frac{^\circ\mbox{C}}{c}\right) $$
-Относительная погрешность удельной теплоты кристаллизации:
-$$ \varepsilon\lambda = \sqrt{\left( \frac{\Delta T_k}{T_k}\right)^2  + \left(\frac{\Delta x}{x}\right)^2}$$
+Оценим погрешность косвенного измерения удельной теплоты кристаллизации по формуле:
+$$ \delta\lambda=\sqrt{\left( \frac{\Delta x}{x}\right)^2+\left( \frac{\Delta t_k}{t_k}\right)^2 }$$
+$$ \Delta t_k = 20\;\mbox{с};\;\Delta x=\frac{\mid x_1-x_2\mid}{2}=0,0035\;\left( \frac{\mbox{K}}{c}\right)$$
+$$\delta\lambda=\sqrt{\left( \frac{0,0035}{0,0735}\right)^2 + \left( \frac{20}{960}\right)^2}=0,052$$
+$$ \Delta\lambda=\lambda\,\delta\lambda=7719\;\left( \frac{\mbox{Дж}}{\mbox{кг}}\right)$$\\
+
+Погрешность для энтропии:
+$$ \delta(S_2-S_1)=\sqrt{ \delta\lambda^2 + \left( \frac{\Delta T_k}{T_k}\right)^2 +\left(  \frac{\Delta M_0}{M_0}\right)^2}$$
+$$ \delta(S_2-S_1)=\sqrt{ 0,052^2 + \left( \frac{2}{174,1+273}\right)^2 +\left(  \frac{1}{120}\right)^2}=0,053$$
+$$ \Delta(S_2-S_1)=(S_2-S_1)\,\delta(S_2-S_1)=2,1$$\\
+
+\textbf{Окончательные результаты.}\\
+Удельная теплота кристаллизации:
+$$ \fbox{$\lambda=(148\pm8)\cdot10^3\: \frac{\mbox{Дж}}{\mbox{кг}}$}$$
+Изменение энтропии:
+$$ \fbox{$S_2-S_1=(39,9\pm2,1)\;\frac{\mbox{Дж}}{\mbox{К}}$}$$
+
 
 
 
@@ -246,7 +261,8 @@ $$ \varepsilon\lambda = \sqrt{\left( \frac{\Delta T_k}{T_k}\right)^2  + \left(\f
 		420	&	175.7	&	920	&	174.1	&	1420	&	148.7	&	1920	&	117.7	\\
 		440	&	175.6	&	940	&	174.0	&	1440	&	147.0	&	\cellcolor{yellow}1940	&	\cellcolor{yellow}116.6	\\
 		460	&	175.4	&	960	&	173.9	&	1460	&	145.9	&		&		\\
-		480	&	175.3	&	980	&	173.8	&	1480	&	144.2	&		&		
+		480	&	175.3	&	980	&	173.8	&	1480	&	144.2	&		&	\\
+		\hline\hline
 	\end{tabular}
 \end{table}
 
