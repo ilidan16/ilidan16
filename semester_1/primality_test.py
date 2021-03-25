@@ -52,5 +52,5 @@ def primality_test_2_0(z):
     else:
         return False
 #================================================================
-print(5)  
+print(primality_test_2_0(1))  
     
