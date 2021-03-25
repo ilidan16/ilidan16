@@ -52,9 +52,5 @@ def primality_test_2_0(z):
     else:
         return False
 #================================================================
-z = random.randint(2,10000)
-print(z, primality_test_2_0(z))
-print(561, primality_test_2_0(561))
-
-            
+print(5)  
     
