@@ -3,7 +3,6 @@ import time
 import semester_1.primality_test as test
 
 def clicked():
-    
     z = int(enter.get())
     if z == 1:
         lbl1.configure(text="error")
