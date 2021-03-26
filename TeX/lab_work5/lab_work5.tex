@@ -102,17 +102,19 @@
 			\begin{axis}[legend pos = north west,xlabel={Температура $t$, $ ^{\circ}C $}, ylabel={Давление $ P{,}\;$кПа}]
 				\legend{,$ 0.151311\,t+93.3654 $};
 				
-				\addplot[black, mark=*, mark size=1.1pt, only marks] 
-				coordinates {
-					(49.6,100.775)
-					(47.6, 100.575)
-					(45.9,100.375)
-					(44.4, 100.175)
-					(43.4, 99.975)
-					(42.4, 99.775)
-					(41.3,99.575)
-					(40.1,99.375)
-					(39.1,99.275)
+				\addplot [ only marks, mark=*, mark size=1.5pt,  error bars/.cd, y dir=both, y explicit]
+				table [x=x, y=y, y error=y-err]
+				{
+					x     y  y-err
+					49.6 	100.775  	0.2
+					47.6	 100.575 	0.2
+					45.9	100.375		0.2
+					44.4	 100.175	0.2
+					43.4	99.975		0.2
+					42.4	 99.775		0.2
+					41.3	99.575		0.2
+					40.1	99.375		0.2
+					39.1	99.275		0.2
 				};
 				
 				\addplot [draw=red][domain=39:50]{93.3654 + 0.151311*x};
