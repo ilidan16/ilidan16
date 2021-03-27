@@ -50,10 +50,7 @@
 	Свиридов Фёдор, Александр Слободнюк, Владимир Попов
 \end{center}
 \begin{center}
-	\large\bfseries{<<Измерение энтропии>>}
-	
-	\parindent=5cm
-	\rule{5cm}{0.2mm}\\
+	\large\bfseries{<<Измерение энтропии>>}\\
 \end{center}
 %---------------------------------------------------------------------------------------
 
@@ -116,7 +113,7 @@ $$ x_1 = \frac{\Delta T_1}{\Delta t_1}=-0,077\; \frac{^\circ\mbox{C}}{c}\;\left(
 $$ x_2 = \frac{\Delta T_2}{\Delta t_2}=-0,07\; \frac{^\circ\mbox{C}}{c}\;\left( \frac{\mbox{K}}{c}\right)$$
 $$x=\frac{\Delta T}{\Delta t}=\frac{x_1+x_2}{2}=-0,0735\; \frac{^\circ\mbox{C}}{c}\;\left( \frac{\mbox{K}}{c}\right)$$\\
 
-
+\begin{center}
  \begin{tikzpicture}
  	\begin{axis}[ymajorgrids,xmajorgrids,
  		minor tick num = 1,
@@ -227,17 +224,17 @@ $$x=\frac{\Delta T}{\Delta t}=\frac{x_1+x_2}{2}=-0,0735\; \frac{^\circ\mbox{C}}{
  	\addplot[red,point meta=explicit symbolic,line width=0.9pt][domain=-70:270]{190.635 - 0.0771329*x};
  	\addplot[blue,point meta=explicit symbolic,line width=0.9pt][domain=1000:2000]{249.556 - 0.0697749*x};
  	\end{axis}
- \end{tikzpicture}\\
+ \end{tikzpicture}
+\end{center}
 
-\textbf{Расчет результатов косвенных измерений.}
+{\parindent=0pt\textbf{Расчет результатов косвенных измерений.}}\\
 По формуле \hyperlink{formul1}{(1)} вычисляем удельную теплоту кристаллизации сплава:
-$$ \lambda=\frac{188\cdot120\cdot10^{-3} + 460\cdot0,5}{120\cdot10^{-3}}\cdot0,0735\cdot960=148505\;\left( \frac{\mbox{Дж}}{\mbox{кг}}\right)$$\\
-
+$$ \lambda=\frac{188\cdot120\cdot10^{-3} + 460\cdot0,5}{120\cdot10^{-3}}\cdot0,0735\cdot960=148505\;\left( \frac{\mbox{Дж}}{\mbox{кг}}\right)$$
 По формуле \hyperlink{formul2}{(2)} находим изменение энтропии:
 $$ S_2-S_1=\frac{(-148505)\cdot120\cdot10^{-3}}{174,1+273}=-39,8582\;\left( \frac{\mbox{Дж}}{\mbox{К}}\right)$$\\
 
 
-\textbf{Погрешность измерений.}
+{\parindent=0pt\textbf{Погрешность измерений.}}\\
 Оценим погрешность косвенного измерения удельной теплоты кристаллизации по формуле:
 $$ \delta\lambda=\sqrt{\left( \frac{\Delta x}{x}\right)^2+\left( \frac{\Delta t_k}{t_k}\right)^2 }$$
 $$ \Delta t_k = 20\;\mbox{с};\;\Delta x=\frac{\mid x_1-x_2\mid}{2}=0,0035\;\left( \frac{\mbox{K}}{c}\right)$$
@@ -249,14 +246,14 @@ $$ \delta(S_2-S_1)=\sqrt{ \delta\lambda^2 + \left( \frac{\Delta T_k}{T_k}\right)
 $$ \delta(S_2-S_1)=\sqrt{ 0,052^2 + \left( \frac{2}{174,1+273}\right)^2 +\left(  \frac{1}{120}\right)^2}=0,053$$
 $$ \Delta(S_2-S_1)=(S_2-S_1)\,\delta(S_2-S_1)=2,1$$\\
 
-\textbf{Окончательные результаты.}\\
+{\parindent=0pt \textbf {Окончательные результаты.}}\\
 Удельная теплота кристаллизации:
 $$ \fbox{$\lambda=(148\pm8)\cdot10^3\: \frac{\mbox{Дж}}{\mbox{кг}}$}$$
 Изменение энтропии:
 $$ \fbox{$S_2-S_1=(-39,9\pm2,1)\;\frac{\mbox{Дж}}{\mbox{К}}$}$$\\
 
-\textbf{Выводы и анализ результатов.}
-
+{\parindent=0pt
+\textbf{Выводы и анализ результатов.}}\\
 Мы косвенно измерили удельную теплоту кристаллизации сплава олова и свинца, оценили изменение энтропии при переходе вещества из жидкой фазы в твёрдую. Полученная удельная теплота кристаллизации сильно отличается от ожидаемой величины.\\
 Для чистого олова и свинца $\lambda_{Sn}=60\;\frac{\mbox{кДж}}{\mbox{кг}}$; $\lambda_{Pb}=25\;\frac{\mbox{кДж}}{\mbox{кг}}$. Ожидаемая величина равна $\lambda=0,6\lambda_{Sn}+0,4\lambda_{Pb}=46\;\frac{\mbox{кДж}}{\mbox{кг}}$. По-нашему мнению, свойства сплава сильно отличаются от свойств чистых веществ, и данная оценка не верна. Но также и возможно, что в нашем опыте существует методическая ошибка.
 
