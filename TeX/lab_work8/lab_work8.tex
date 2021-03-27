@@ -1,4 +1,4 @@
-\documentclass[a4paper]{scrartcl}
+\documentclass[a4paper]{article}
 
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -19,28 +19,44 @@
 
 \usepackage{wasysym}
 
+\usepackage[]{geometry}
+\geometry
+{
+	a4paper,
+	total={170mm,257mm},
+	left=25mm,
+	top=19mm,
+	right=25mm
+}
 
 
 \begin{document}
 
 \selectlanguage{russian}
-	%----------------------------------Шапка------------------------------------
-\begin{center}
-	\includegraphics[scale=0.25]{AU}\\
-	{\Large\bfseries Санкт-Петербургский национальный исследовательский Академический университет имени Ж.И.~Алфёрова Российской академии наук}
-\end{center}
+%----------------------------------Шапка-------------------------------------------
+\begin{figure}[htb]
+	\begin{minipage}[c]{0.12\textwidth}
+		\includegraphics[scale=0.25]{AU}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.9\textwidth}
+		{\Large\bfseries Санкт-Петербургский национальный исследовательский Академический университет имени Ж.И.~Алфёрова\\Российской академии наук}
+	\end{minipage}
+	\rule{164mm}{0.3mm}
+\end{figure}
 
 \begin{center}
 	{\large\textbf{Рабочий протокол и отчёт по лабораторной работе № 8}}\\
 	Свиридов Фёдор, Александр Слободнюк, Владимир Попов
 \end{center}
-
 \begin{center}
-	\rule{12cm}{0.4mm}\\
-	\large\bfseries{<<Измерение энтропии>>}\\
-	\rule{12cm}{0.4mm}
+	\large\bfseries{<<Измерение энтропии>>}
+	
+	\parindent=5cm
+	\rule{5cm}{0.2mm}\\
 \end{center}
-%-----------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------
+
 \paragraph{Цель работы.} Исследование зависимости температуры металла от времени при охлаждении
 \paragraph{Задачи, решаемые при выполении работы.}
 \begin{enumerate}
