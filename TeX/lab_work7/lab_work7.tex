@@ -45,64 +45,14 @@
 		\Large\bfseries{<<>>}\\
 	\end{center}
 	%-------------------------------------------------------------------------------
-	
- \begin{tikzpicture}
-	\begin{axis}[ymajorgrids, minor tick num = 1]
-		
-					\addplot[red, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks] 
-		coordinates {
-(	35	,	0	)
-(	34	,	2.2	)
-(	33	,	4.7	)
-(	32	,	7.9	)
-(	31	,	11.5	)
-(	30	,	15.4	)
-(	29	,	20.5	)
-(	28	,	26	)
-(	27	,	32	)
-		};
-		\addplot [draw=red][domain=24:36]{3797.97/x-110.02};
-	
-%-------------------------------------------------------------------------------
-			\addplot[blue, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks] 
-	coordinates {
-	(	35	,	0	)
-	(	34	,	2.4	)
-	(	33	,	5.3	)
-	(	32	,	8.7	)
-	(	31	,	12.4	)
-	(	30	,	16.6	)
-	(	29	,	21.3	)
-	(	28	,	27.5	)
-	(	27	,	33.2	)
-	(	26	,	41	)
-	};
-\addplot [draw=blue][domain=24:36]{4121.88/x-119.521};
-%-------------------------------------------------------------------------------
-			\addplot[black, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks] 
-coordinates {
-(	35	,	0	)
-(	34	,	1.3	)
-(	33	,	4	)
-(	32	,	7	)
-(	31	,	11.5	)
-(	30	,	15.4	)
-(	29	,	19.8	)
-(	28	,	25.8	)
-(	27	,	34	)
-(	26	,	43	)
-};
-\addplot [draw=black][domain=24:36]{4309.08/x-126.374};
-	\end{axis}
-\end{tikzpicture}
-
-
 	\begin{figure}[htb]
+		\centering{\textbf{Изотермы при разных температурах}}
 	\begin{center}
 	\begin{minipage}[c]{0.32\textwidth}
-		 \begin{tikzpicture}[scale=0.7]
-			\begin{axis}[]
-									\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
+		 \begin{tikzpicture}[scale=0.6]
+			\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
+				\legend{,$ \frac{3797.97}{x}-110.02$};
+				\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
 				coordinates {
 					(	35	,	0	)
 					(	34	,	2.2	)
@@ -118,10 +68,14 @@ coordinates {
 				
 			\end{axis}
 			\end{tikzpicture}
+		
+		{\parindent=2.25cm $T=28\;^{\circ} C$}
 	\end{minipage}
+\hfill
 	\begin{minipage}[c]{0.32\textwidth}
-		 \begin{tikzpicture}[scale=0.7]
-			\begin{axis}[]
+		 \begin{tikzpicture}[scale=0.6]
+			\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
+				\legend{,$ \frac{4121.88}{x}-119.52$};
 					\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
 		coordinates {
 			(	35	,	0	)
@@ -138,10 +92,14 @@ coordinates {
 		\addplot [draw=red][domain=24:36]{4121.88/x-119.521};
 	\end{axis}
 \end{tikzpicture}
+
+{\parindent=2.25cm $T=33\;^{\circ} C$}
 	\end{minipage}
+\hfill
 	\begin{minipage}[c]{0.32\textwidth}
-	\begin{tikzpicture}[scale=0.7]
-		\begin{axis}[]
+	\begin{tikzpicture}[scale=0.6]
+		\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
+			\legend{,$ \frac{4309.08}{x}-126.37$};
 			\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
 coordinates {
 	(	35	,	0	)
@@ -158,8 +116,68 @@ coordinates {
 \addplot [draw=red][domain=24:36]{4309.08/x-126.374};
 		\end{axis}
 	\end{tikzpicture}
+
+{\parindent=2.25cm $T=39\;^{\circ} C$}
 \end{minipage}
 \end{center}
+\end{figure}
+
+
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\begin{tikzpicture}[scale=1.2]
+			\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
+				\legend{,$T=28\;^{\circ} C$, ,$T=33\;^{\circ} C$, ,$T=39\;^{\circ} C$}
+				
+				\addplot[red, point meta=explicit symbolic,mark=square*, mark size=0.9pt, only marks] 
+				coordinates {
+					(	35	,	0	)
+					(	34	,	2.2	)
+					(	33	,	4.7	)
+					(	32	,	7.9	)
+					(	31	,	11.5	)
+					(	30	,	15.4	)
+					(	29	,	20.5	)
+					(	28	,	26	)
+					(	27	,	32	)
+				};
+				\addplot [draw=red][domain=24:36]{3797.97/x-110.02};
+				
+				%-------------------------------------------------------------------------------
+				\addplot[blue, point meta=explicit symbolic,mark=triangle*, mark size=1.2pt, only marks] 
+				coordinates {
+					(	35	,	0	)
+					(	34	,	2.4	)
+					(	33	,	5.3	)
+					(	32	,	8.7	)
+					(	31	,	12.4	)
+					(	30	,	16.6	)
+					(	29	,	21.3	)
+					(	28	,	27.5	)
+					(	27	,	33.2	)
+					(	26	,	41	)
+				};
+				\addplot [draw=blue][domain=24:36]{4121.88/x-119.521};
+				%-------------------------------------------------------------------------------
+				\addplot[black, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks] 
+				coordinates {
+					(	35	,	0	)
+					(	34	,	1.3	)
+					(	33	,	4	)
+					(	32	,	7	)
+					(	31	,	11.5	)
+					(	30	,	15.4	)
+					(	29	,	19.8	)
+					(	28	,	25.8	)
+					(	27	,	34	)
+					(	26	,	43	)
+				};
+				\addplot [draw=black][domain=24:36]{4309.08/x-126.374};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
 \end{figure}
 
 
