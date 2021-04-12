@@ -1,0 +1,167 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage[unicode, colorlinks, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\usepackage[]{geometry}
+\geometry
+{
+	a4paper,
+	total={170mm,257mm},
+	left=25mm,
+	top=19mm,
+	right=25mm
+}
+
+\begin{document}
+	\selectlanguage{russian}
+	%----------------------------------Шапка--------------------------------------
+	\begin{figure}[htb]
+		\begin{minipage}[c]{0.12\textwidth}
+			\includegraphics[scale=0.25]{AU}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.9\textwidth}
+			{\Large\bfseries Санкт-Петербургский национальный исследовательский Академический университет имени Ж.И.~Алфёрова\\Российской академии наук}
+		\end{minipage}
+		\rule{164mm}{0.3mm}
+	\end{figure}
+	
+	\begin{center}
+		{\large\textbf{Рабочий протокол и отчёт по лабораторной работе № }}\\
+		Свиридов Фёдор, Александр Слободнюк, Владимир Попов
+	\end{center}
+	\begin{center}
+		\Large\bfseries{<<>>}\\
+	\end{center}
+	%-------------------------------------------------------------------------------
+	
+ \begin{tikzpicture}
+	\begin{axis}[ymajorgrids, minor tick num = 1]
+		
+					\addplot[red, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks] 
+		coordinates {
+(	35	,	0	)
+(	34	,	2.2	)
+(	33	,	4.7	)
+(	32	,	7.9	)
+(	31	,	11.5	)
+(	30	,	15.4	)
+(	29	,	20.5	)
+(	28	,	26	)
+(	27	,	32	)
+		};
+		\addplot [draw=red][domain=24:36]{3797.97/x-110.02};
+	
+%-------------------------------------------------------------------------------
+			\addplot[blue, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks] 
+	coordinates {
+	(	35	,	0	)
+	(	34	,	2.4	)
+	(	33	,	5.3	)
+	(	32	,	8.7	)
+	(	31	,	12.4	)
+	(	30	,	16.6	)
+	(	29	,	21.3	)
+	(	28	,	27.5	)
+	(	27	,	33.2	)
+	(	26	,	41	)
+	};
+\addplot [draw=blue][domain=24:36]{4121.88/x-119.521};
+%-------------------------------------------------------------------------------
+			\addplot[black, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks] 
+coordinates {
+(	35	,	0	)
+(	34	,	1.3	)
+(	33	,	4	)
+(	32	,	7	)
+(	31	,	11.5	)
+(	30	,	15.4	)
+(	29	,	19.8	)
+(	28	,	25.8	)
+(	27	,	34	)
+(	26	,	43	)
+};
+\addplot [draw=black][domain=24:36]{4309.08/x-126.374};
+	\end{axis}
+\end{tikzpicture}
+
+
+	\begin{figure}[htb]
+	\begin{center}
+	\begin{minipage}[c]{0.32\textwidth}
+		 \begin{tikzpicture}[scale=0.7]
+			\begin{axis}[]
+									\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
+				coordinates {
+					(	35	,	0	)
+					(	34	,	2.2	)
+					(	33	,	4.7	)
+					(	32	,	7.9	)
+					(	31	,	11.5	)
+					(	30	,	15.4	)
+					(	29	,	20.5	)
+					(	28	,	26	)
+					(	27	,	32	)
+				};
+				\addplot [draw=red][domain=24:36]{3797.97/x-110.02};
+				
+			\end{axis}
+			\end{tikzpicture}
+	\end{minipage}
+	\begin{minipage}[c]{0.32\textwidth}
+		 \begin{tikzpicture}[scale=0.7]
+			\begin{axis}[]
+					\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
+		coordinates {
+			(	35	,	0	)
+			(	34	,	2.4	)
+			(	33	,	5.3	)
+			(	32	,	8.7	)
+			(	31	,	12.4	)
+			(	30	,	16.6	)
+			(	29	,	21.3	)
+			(	28	,	27.5	)
+			(	27	,	33.2	)
+			(	26	,	41	)
+		};
+		\addplot [draw=red][domain=24:36]{4121.88/x-119.521};
+	\end{axis}
+\end{tikzpicture}
+	\end{minipage}
+	\begin{minipage}[c]{0.32\textwidth}
+	\begin{tikzpicture}[scale=0.7]
+		\begin{axis}[]
+			\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
+coordinates {
+	(	35	,	0	)
+	(	34	,	1.3	)
+	(	33	,	4	)
+	(	32	,	7	)
+	(	31	,	11.5	)
+	(	30	,	15.4	)
+	(	29	,	19.8	)
+	(	28	,	25.8	)
+	(	27	,	34	)
+	(	26	,	43	)
+};
+\addplot [draw=red][domain=24:36]{4309.08/x-126.374};
+		\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+\end{center}
+\end{figure}
+
+
+
+	\end{document}

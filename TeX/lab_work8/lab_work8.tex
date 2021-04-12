@@ -113,11 +113,13 @@ $$x=\frac{\Delta T}{\Delta t}=\frac{x_1+x_2}{2}=-0,0735\; \frac{^\circ\mbox{C}}{
 
 \begin{center}
  \begin{tikzpicture}
- 	\begin{axis}[ymajorgrids,xmajorgrids,
+ 	\begin{axis}[
+ 		ymajorgrids,xmajorgrids,
  		minor tick num = 1,
  		nodes near coords,enlargelimits=0.2,
  		xlabel={Время $t$, c}, ylabel={Температура $ T{,}\;^{\circ}$C}]
- 		\addplot[black, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks] 
+ 		\addplot[black, point meta=explicit symbolic,mark=*, mark size=0.9pt, only marks
+ 		] 
  		coordinates {
  			(	0	,	191.6	)[$1^{'} $]
  			(	20	,	190.0	)
