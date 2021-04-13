@@ -77,8 +77,10 @@
 	, где $\Delta P$ - давление над атмосферным; $A = \frac{\rho  l_0}{\mu}RT$.\\
 	\parindent=0pt
 	
-	Таким образом, ожидаемый коэффициент $A$ для $T=28\;^\circ C$ равен
-	$$ A=\frac{1,2\cdot35\cdot8,31\cdot302}{29\cdot10^{-3}\cdot10^3}\approx3635\;\left( \mbox{кПа}\cdot\mbox{см}\right) $$\\
+	Таким образом, ожидаемые коэффициенты $A$ для соответствующих температур  равны
+	$$ A(301)=\frac{1,2\cdot35\cdot8,31\cdot301}{29\cdot10^{-3}\cdot10^3}\approx3623\;\left( \mbox{кПа}\cdot\mbox{см}\right) $$
+	$$ A(306)\approx3683\;\left( \mbox{кПа}\cdot\mbox{см}\right) $$
+	$$ A(312)\approx3755\;\left( \mbox{кПа}\cdot\mbox{см}\right) $$\\
 	
 		\newpage
 	{\parindent=0pt\textbf{Результаты прямых измерений.}}\\
@@ -171,82 +173,82 @@
 \end{figure}
 	
 	
-	{\parindent=0pt\textbf{Обработка результатов.}}\\
-	\begin{figure}[htb]
-		\centering{\textbf{Изотермы при разных температурах}}
+{\parindent=0pt\textbf{Обработка результатов.}}\\
+\begin{figure}[htb]
+	\centering{\textbf{Изотермы при разных температурах}}
 	\begin{center}
-	\begin{minipage}[c]{0.32\textwidth}
-		 \begin{tikzpicture}[scale=0.6]
-			\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
-				\legend{,$ 3797.97\cdot\frac{1}{l}-110.02$};
-				\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
-				coordinates {
-					(	35	,	0	)
-					(	34	,	2.2	)
-					(	33	,	4.7	)
-					(	32	,	7.9	)
-					(	31	,	11.5	)
-					(	30	,	15.4	)
-					(	29	,	20.5	)
-					(	28	,	26	)
-					(	27	,	32	)
-				};
-				\addplot [draw=red][domain=24:36]{3797.97/x-110.02};
-				
-			\end{axis}
-			\end{tikzpicture}
-		
-		{\parindent=2.25cm $T=28\;^{\circ} C$}
-	\end{minipage}
-\hfill
-	\begin{minipage}[c]{0.32\textwidth}
-		 \begin{tikzpicture}[scale=0.6]
-			\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
-				\legend{,$ 4121.88\cdot\frac{1}{l}-119.52$};
+		\begin{minipage}[c]{0.32\textwidth}
+			\begin{tikzpicture}[scale=0.6]
+				\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
+					\legend{,$ 3797.97\cdot\frac{1}{l}-110.02$};
 					\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
-		coordinates {
-			(	35	,	0	)
-			(	34	,	2.4	)
-			(	33	,	5.3	)
-			(	32	,	8.7	)
-			(	31	,	12.4	)
-			(	30	,	16.6	)
-			(	29	,	21.3	)
-			(	28	,	27.5	)
-			(	27	,	33.2	)
-			(	26	,	41	)
-		};
-		\addplot [draw=red][domain=24:36]{4121.88/x-119.521};
-	\end{axis}
-\end{tikzpicture}
-
-{\parindent=2.25cm $T=33\;^{\circ} C$}
-	\end{minipage}
-\hfill
-	\begin{minipage}[c]{0.32\textwidth}
-	\begin{tikzpicture}[scale=0.6]
-		\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
-			\legend{,$ 4309.08\cdot\frac{1}{l}-126.37$};
-			\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
-coordinates {
-	(	35	,	0	)
-	(	34	,	1.3	)
-	(	33	,	4	)
-	(	32	,	7	)
-	(	31	,	11.5	)
-	(	30	,	15.4	)
-	(	29	,	19.8	)
-	(	28	,	25.8	)
-	(	27	,	34	)
-	(	26	,	43	)
-};
-\addplot [draw=red][domain=24:36]{4309.08/x-126.374};
-		\end{axis}
-	\end{tikzpicture}
-
-{\parindent=2.25cm $T=39\;^{\circ} C$}
-\end{minipage}
-\end{center}
+					coordinates {
+						(	35	,	0	)
+						(	34	,	2.2	)
+						(	33	,	4.7	)
+						(	32	,	7.9	)
+						(	31	,	11.5	)
+						(	30	,	15.4	)
+						(	29	,	20.5	)
+						(	28	,	26	)
+						(	27	,	32	)
+					};
+					\addplot [draw=red][domain=24:36]{3797.97/x-110.02};
+					
+				\end{axis}
+			\end{tikzpicture}
+			
+			{\parindent=2.25cm $T=28\;^{\circ} C$}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[c]{0.32\textwidth}
+			\begin{tikzpicture}[scale=0.6]
+				\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
+					\legend{,$ 4121.88\cdot\frac{1}{l}-119.52$};
+					\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
+					coordinates {
+						(	35	,	0	)
+						(	34	,	2.4	)
+						(	33	,	5.3	)
+						(	32	,	8.7	)
+						(	31	,	12.4	)
+						(	30	,	16.6	)
+						(	29	,	21.3	)
+						(	28	,	27.5	)
+						(	27	,	33.2	)
+						(	26	,	41	)
+					};
+					\addplot [draw=red][domain=24:36]{4121.88/x-119.521};
+				\end{axis}
+			\end{tikzpicture}
+			
+			{\parindent=2.25cm $T=33\;^{\circ} C$}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[c]{0.32\textwidth}
+			\begin{tikzpicture}[scale=0.6]
+				\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
+					\legend{,$ 4309.08\cdot\frac{1}{l}-126.37$};
+					\addplot[black, point meta=explicit symbolic,mark=*, mark size=1.3pt, only marks] 
+					coordinates {
+						(	35	,	0	)
+						(	34	,	1.3	)
+						(	33	,	4	)
+						(	32	,	7	)
+						(	31	,	11.5	)
+						(	30	,	15.4	)
+						(	29	,	19.8	)
+						(	28	,	25.8	)
+						(	27	,	34	)
+						(	26	,	43	)
+					};
+					\addplot [draw=red][domain=24:36]{4309.08/x-126.374};
+				\end{axis}
+			\end{tikzpicture}
+			
+			{\parindent=2.25cm $T=39\;^{\circ} C$}
+		\end{minipage}
+	\end{center}
 \end{figure}
 
 
@@ -254,7 +256,7 @@ coordinates {
 
 \begin{figure}[htb]
 	\begin{center}
-		\begin{tikzpicture}[scale=1.1]
+		\begin{tikzpicture}[scale=0.9]
 			\begin{axis}[xlabel={$l$, см}, ylabel={$\Delta P$, кПа}, ymajorgrids, minor tick num = 1]
 				\legend{$T=28\;^{\circ} C$,$T=33\;^{\circ} C$,$T=39\;^{\circ} C$}
 				
@@ -273,6 +275,8 @@ coordinates {
 \end{figure}
 
 {\parindent=0pt\textbf{Выводы и анализ результатов.}}\\
-Мы измерили 
+Мы провели несколько изотермических сжатий идеального газа для проверки закона Бойля-Мариотта. Экстраполяция полученных данных дала коэффициенты, которые по порядку величины совпадают с ожидаемыми.
+
+Полученные изотермы оказались не очень <<параллельными>>, потому что в опыте есть несколько недостатков: масса газа оставалась не постоянной, так как установка пропускала воздух, что заставляло нас сжимать газ с большой скоростью, а это не является квазистатическим процессом.
 
 	\end{document}
