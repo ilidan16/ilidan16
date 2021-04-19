@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.7)  18 APR 2021 23:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.7)  19 APR 2021 08:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1146,27 +1146,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Overfull \hbox (15.06076pt too wide) in paragraph at lines 94--110
+Overfull \hbox (15.06076pt too wide) in paragraph at lines 91--107
  [] 
  []
 
 
-Overfull \hbox (15.06076pt too wide) in paragraph at lines 113--129
+Overfull \hbox (15.06076pt too wide) in paragraph at lines 110--126
  [] 
  []
 
 
-Overfull \hbox (15.06076pt too wide) in paragraph at lines 132--148
+Overfull \hbox (15.06076pt too wide) in paragraph at lines 129--145
  [] 
  []
 
@@ -1198,8 +1198,8 @@ Package rerunfilecheck Info: File `lab_work2.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
  ) 
 Here is how much of TeX's memory you used:
- 31711 strings out of 480608
- 727887 string characters out of 5903630
+ 31710 strings out of 480608
+ 727875 string characters out of 5903630
  1107918 words of memory out of 5000000
  47102 multiletter control sequences out of 15000+600000
  539262 words of font info for 34 fonts, out of 8000000 for 9000
@@ -1219,10 +1219,10 @@ ive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texliv
 e/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/
 2020/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/20
 20/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on lab_work2.pdf (3 pages, 167120 bytes).
+Output written on lab_work2.pdf (3 pages, 168203 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
