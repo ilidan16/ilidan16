@@ -1,24 +1,28 @@
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, request, flash
 
 menu = ["Установка", "Первое приложение", "Обратная связь"]
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'fdgdfgdfggf786hfg6hfg6h7f'
 
 @app.route('/')
 def index():
-    print( url_for('index') )
     return render_template('index.html', menu=menu)
 
 @app.route('/about')
 def about():
-    print( url_for('about') )
     return render_template('about.html')
 
 
 @app.route('/contact', methods=["POST", 'GET'])
 def contact():
+
+
     if request.method == 'POST':
-        print(request.form)
+        if len(request.form['username']) > 2:
+            flash('Сообщение отправлено')
+        else:
+            flash('Ошибка отправки')
 
         
     return render_template('contact.html')
