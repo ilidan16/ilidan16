@@ -13,16 +13,15 @@ def index():
 def simplicity():
     if request.method == 'POST':
         number = int(request.form['enter'])
-        result = test.primality_test_2_0(number)
-
-        if result:
-            flash('Да')
+        if number <= 1:
+            flash('error')
         else:
-            flash('Нет')
+            result = test.primality_test_2_0(number)
+            if result:
+                flash('Да')
+            else:
+                flash('Нет')
 
-        
-
-    
     return render_template('simplicity.html')
 
 if __name__ == "__main__":
