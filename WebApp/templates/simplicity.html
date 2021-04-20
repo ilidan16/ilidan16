@@ -1,0 +1,9 @@
+
+<form action="/simplicity" method="post">
+<p><label>Число простое?</label>
+<p><textarea name="enter" rows=2 cols=10></textarea>
+<p><input type="submit" value="Ввод" />
+</form>
+{% for msg in get_flashed_messages() %}
+<div>{{msg}}</div>
+{% endfor %}
