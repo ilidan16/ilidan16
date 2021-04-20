@@ -15,9 +15,5 @@ def about():
     return render_template('about.html')
 
 
-@app.route("/profile/<path:username>")
-def profile(username):
-    return f"Пользователь: {username}"
-
 if __name__ == "__main__":
     app.run(debug = True)
