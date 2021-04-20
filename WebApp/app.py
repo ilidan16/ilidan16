@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash
-#import semester_1.primality_test as test
+import primality_test as test
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'fdgdfgdfggf786hfg6hfg6h7f'
@@ -12,12 +12,13 @@ def index():
 @app.route('/simplicity', methods=["POST", 'GET'])
 def simplicity():
     if request.method == 'POST':
-        number = request.form['enter']
+        number = int(request.form['enter'])
+        result = test.primality_test_2_0(number)
 
-        if len(request.form['enter']) > 2:
-            flash('Сообщение отправлено')
+        if result:
+            flash('Да')
         else:
-            flash('Ошибка отправки')
+            flash('Нет')
 
         
 
