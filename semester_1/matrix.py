@@ -56,6 +56,7 @@ class Matrix():
                 result[i][j] = copy[j][i]
         return Matrix(result)
 #==============================================================
+"""
 A = Matrix([
     [5,3,6],
     [4,2,1],
@@ -79,9 +80,4 @@ B = Matrix([
     [3,1,5],
     [3,4,1]
     ])
-
-print(A+B+C+E)
-print(A*B)
-print(A*E)
-print(C.transpose())
-        
+"""

@@ -1,13 +1,11 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[russian,english]{babel}
-
-\usepackage{amsmath}
+\usepackage[russian]{babel}
 
 \usepackage[unicode, colorlinks, linkcolor=blue, citecolor=blue]{hyperref}
-
+\usepackage{amsmath}
 \usepackage{graphicx}
 \graphicspath{{pictures/}}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
@@ -15,125 +13,115 @@
 \usepackage{pgfplots}
 \usepackage{tikz}
 
+\usepackage[]{geometry}
+\geometry
+{
+	a4paper,
+	total={170mm,257mm},
+	left=25mm,
+	top=19mm,
+	right=25mm
+}
+
 \begin{document}
 	\selectlanguage{russian}
-	%----------------------------------Шапка------------------------------------
-	\begin{center}
-		\includegraphics[scale=0.25]{AU}\\
-		{\Large\bfseries Санкт-Петербургский национальный исследовательский Академический университет имени Ж.И.~Алфёрова Российской академии наук}
-	\end{center}
+	%----------------------------------Шапка--------------------------------------
+	\begin{figure}[htb]
+		\begin{minipage}[c]{0.12\textwidth}
+			\includegraphics[scale=0.25]{AU}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.9\textwidth}
+			{\Large\bfseries Санкт-Петербургский национальный исследовательский Академический университет имени Ж.И.~Алфёрова\\Российской академии наук}
+		\end{minipage}
+		\rule{164mm}{0.3mm}
+	\end{figure}
 	
 	\begin{center}
-		{\large\textbf{Рабочий протокол и отчёт по лабораторной работе № 3}}\\
+		{\large\textbf{Рабочий протокол и отчёт по лабораторной работе №3 }}\\
 		Свиридов Фёдор, Александр Слободнюк, Владимир Попов
 	\end{center}
-	
 	\begin{center}
-		\rule{12cm}{0.4mm}\\
-		\large\bfseries{<<Определение  средней длины свободного пробега и эффективного диаметра молекул воздуха>>}\\
-		\rule{12cm}{0.4mm}
+		\Large\bfseries{<<Эффект Холла в примесном полупроводнике>>}\\
 	\end{center}
-	%-----------------------------------------------------------------------------
+	%-------------------------------------------------------------------------------
 	
-	\paragraph{Цель работы.}
-	Определить среднюю длину свободного пробега молекул воздуха; определить эффективный диаметр молекул воздуха.
+	{\parindent=0pt\textbf{Исходные данные.}}\\
+	\begin{center}
+		\includegraphics[scale=0.3]{pain}
+	\end{center}
+Геометрические размеры полупроводника p-Ge:
+$l=20\;\mbox{мм}$; $h=10\;\mbox{мм}$; $d=1\;\mbox{мм}$; $S=hd=10\;\mbox{мм}^2$.
+\begin{equation}
+	I=\sigma\frac{S}{l}\,U_{\parallel}
+\end{equation}
+
+\begin{equation}
+	U_{\perp}=R\frac{I}{d}\,B
+\end{equation}
+
+\begin{equation}
+	R=\frac{1}{en}
+\end{equation}
 	
-	\paragraph{Задачи, решаемые при выполнении работы.}
-	\begin{enumerate}
-		\item Узнать температуру и атмосферное давление в помещении 
-		\item Измерить нужное для расчётов время, за которое в мензурку поступает 100мл воды
-		\item Измерить высоту жидкости в колбе до и после вытеснение воды воздухом
-		\item  По рабочей формуле рассчитать среднюю длину пробега молекул воздуха
-		\item  Рассчитать эффективный диаметр молекул
-		\item Сделать выводы
-	\end{enumerate}
 	
-	\paragraph{Объект исследования.}
-	Связь макроскопических и микроскопических параметров в рамках данной модели
-	
-	\paragraph{Метод экспериментального исследования.}
-	Измерение скорости вытеснения воды из колбы воздухом
-	
-	\paragraph{Рабочие формулы и исходные данные.}\hypertarget{formuls}{}
-	\begin{equation}
-		<\lambda>=\frac{3\pi r^4}{16lP} \frac{\Delta P\tau}{V} \sqrt{\frac{\pi RT}{2\mu}}
-	\end{equation}
-	
-	\begin{equation}
-		d=\sqrt{\frac{kT}{\sqrt{2}\pi <\lambda>P}}
-	\end{equation}
-	
-	\begin{equation}
-		\Delta P=\rho g\, \frac{h_1+h_2}{2}
-	\end{equation}
-	
-	\begin{equation}
-		\varepsilon=\frac{\Delta \rho}{\rho}+\frac{\Delta g}{g}+\frac{\Delta h_1+\Delta h_2}{h_1+h_2}+\frac{\Delta \tau}{\tau}+\frac{\Delta V}{V}
-	\end{equation}
-	
-	\paragraph{Результаты прямых измерений и их обработки.}
-	\begin{itemize}
-		\item $T=288\;\mbox{K}$
-		\item$P=766\;\mbox{мм рт. ст.}$
-		\begin{table}[htb]
-			\begin{tabular}{c|c|c|c}
-				$h_1$,  см & $h_2$,  см & V,  мл & $\tau$,  с \\
-				\hline
-				6,7 & 5,4 & 100 & 115 \\
-				
-				6,7 & 5,4 & 100 & 112 \\
-				
-				6,7 & 5,4 & 100 & 115 \\
-			\end{tabular}
-		\end{table}
-	\end{itemize}
-	
-	\paragraph{Расчет результатов косвенных измерений.}
-	\begin{itemize}
-		\item По формуле \hyperlink{formuls}{(3)} находим разность давлений:
-		$$ \Delta P=1000\cdot9,8\cdot\frac{6,7\cdot10^{-2}-5,4\cdot10^{-2}}{2}=592,9\;\mbox{(Па)}$$
-		\item Среднее время $<\tau>$:
-		$$<\tau>=\frac{115+112+115}{3}=114\;\mbox{(c)}$$
-		\item Средняя длина $<\lambda>$ свободного пробега молекул воздуха \hyperlink{formuls}{(1)}:
-		$$<\lambda>=\frac{3\cdot3,14\cdot(0,5\cdot10^{-3})^4}{16\cdot0,4\cdot766\cdot133,3}\cdot\sqrt{\frac{3,14\cdot8,31\cdot301}{2\cdot29\cdot10^{-3}}}\cdot\frac{592,9\cdot114}{100\cdot10^{-6}}\approx2,24\cdot10^{-7}\;\mbox{(м)}$$
-		\item Эффективный диаметр молекул \hyperlink{formuls}{(2)}:
-		$$d=\sqrt{\frac{1,38\cdot10^{-23}\cdot301}{\sqrt{2}\cdot3,14\cdot2,24\cdot10^{-7}\cdot766\cdot133,3}}\approx2,02\cdot10^{-10}\;\mbox{(м)}$$
-	\end{itemize}
-	
-	\paragraph{Погрешность измерений.}
-	\begin{itemize}
-		\item $\Delta\rho=5\;\frac{\mbox{кг}}{\mbox{м}^3}$
-		\item$\Delta g=0,1\;\frac{\mbox{м}}{\mbox{с}^2}$
-		\item$\Delta h_1=\Delta h_2=0,1\;\mbox{см}$
-		\item$\Delta \tau=1\;\mbox{c}$
-		\item$\Delta V=5\;\mbox{мл}$
-	\end{itemize}
-	Пользуясь формулой \hyperlink{formuls}{(4)}, находим относительную погрешность $\varepsilon$:
-	$$\varepsilon=\frac{5}{1000}+\frac{0,1}{9,8}+\frac{0,1\cdot10^{-2}+0,1\cdot10^{-2}}{6,7\cdot10^{-2}+5,4\cdot10^{-2}}+\frac{1}{114}+\frac{5\cdot10^{-6}}{100\cdot10^{-6}}\approx0,0905$$
-	Абсолютная погрешность средней длины $<\lambda>$  свободного пробега:
-	$$\Delta \lambda=\varepsilon\lambda=0,0905\cdot2,24\cdot10^{-7}=2,0\cdot10^{-8}\;\mbox{(м)}$$
-	Погрешность диаметра оценим по формуле:
-	$$ \Delta d=\frac{1}{2}\sqrt{\frac{kT}{\sqrt{2}\pi P}}\;\lambda^{-\frac{3}{2}}\;\Delta\lambda$$
-	$$ \Delta d=9\cdot10^{-12}\;\mbox{м}$$
-	\paragraph{Окончательные результаты.}
-	\begin{itemize}
-		\item Средняя длина $<\lambda>$ свободного пробега молекул воздуха:
-		\begin{center}
-			\fbox{$<\lambda>\;=(2,24\pm0,20)\cdot10^{-7}\;\mbox{м}$}
-		\end{center}
+	{\parindent=0pt\textbf{Результаты прямых измерений.}}\\
+	Вольт-амперная характеристика для полупроводника при нулевом магнитном поле:
+	\begin{center}
+	\begin{tabular}{c|c}
+		\hline
+		$I$, мА&$U_{\parallel}$, В  \\
+		\hline
+		5&0,22  \\
+		10&  0,46\\
+		15&  0,75\\
+		20&  0,98\\
+		25&  1,22\\
+		30&  1,49\\
+		35&  1,77\\
+		40&  2,07\\
 		
-		\item Эффективный диаметр $d$ молекул:
-		\begin{center}
-			\fbox{$d\;=(2,02\pm0,09)\cdot10^{-10}\;\mbox{м}$}
-		\end{center}
-		
-	\end{itemize}
-	
-	\paragraph{Выводы и анализ результатов.}
-	Мы косвенно измерили среднюю длину свободного пробега молекул воздуха и их эффективный диаметр. Полученные результаты по порядку величин хорошо согласуются с ожидаемыми. Например, в приложении учебника Иродова И. Е.~\cite{1} указано, что диаметр молекул воздуха  равен $3,5\cdot10^{-10}\; \mbox{(м)}$. Стоит отметить, что данный способ определения диаметра и свободного пробега служит только для оценки, так как он основывается на модели идеального газа и на сферической симметрии молекул.
-	
-	\begin{thebibliography}{3}
-		\bibitem{1}
-		Иродов И. Е. Физика макросистем. Основные законы. 2015. 210 с.
-	\end{thebibliography}
-\end{document}
+	\end{tabular}
+\end{center}
+Зависимость поперечного напряжения $U_{\perp}$ (ЭДС Холла) от силы магнитного поля
+\begin{center}
+	\begin{tabular}{c|c|c}
+		\hline
+		$I$, A&$B$, Тл  & $U_{\perp}$, В \\
+		\hline
+		0,0& 0,007 &  30,0\\
+		0,2&  	0,014		&  30,8\\
+		0,4&  	0,032		&  32,7\\
+		0,6&  		0,056	& 35,4 \\
+		0,8& 			0,080 & 38,2 \\
+		1,0&  			0,103	&  40,7\\
+		1,2&  			0,123	& 43,0 \\
+		1,4&  		0,148	& 45,6 \\
+		1,6&  			0,176& 48,5 \\
+		1,8& 			 0,207&  51,7\\
+		2,0& 				 0,222& 53,3 \\
+	\end{tabular}
+\end{center}
+
+{\parindent=0pt\textbf{Обработка результатов и расчёт косвенных величин.}}\\
+Экстраполяция ВАХ:
+\begin{center}
+	\includegraphics[scale=0.6]{BAX}
+\end{center}
+
+Из формулы (1) $k=\sigma\frac{S}{l}$, где $k=19.1\;\left( \frac{\mbox{мА}}{\mbox{В}}\right) $ - коэффициент пропорциональности ВАХ.\\
+ Отсюда получаем: $\sigma=k\frac{l}{S}$
+ $$ \sigma=19,1\cdot10^{-3}\cdot\frac{20\cdot10^{-3}}{10\cdot10^{-6}}=38,2\quad(\mbox{Ом}^{-1}\cdot\mbox{м}^{-1})$$
+
+\begin{center}
+	\includegraphics[scale=0.6]{Hall}
+\end{center}
+
+Из формулы (2): $\alpha=R\,\frac{I}{d}$, где $\alpha = 108,72\;\left( \frac{\mbox{В}}{\mbox{Тл}}\right)$ $\Rightarrow$ $R=\alpha\,\frac{d}{I}$
+$$ R=108,72\cdot\frac{10^{-3}}{15\cdot10^{-3}}=7,248\;\left( \frac{\mbox{м}^3}{\mbox{Кл}}\right) $$
+
+По формуле (3) находим концентрацию носителей заряда:
+$$n=\frac{1}{1,6\cdot10^{-19}\cdot7,248}\approx8\cdot10^{17}\;(\mbox{м}^{-3})$$
+
+
+	\end{document}
