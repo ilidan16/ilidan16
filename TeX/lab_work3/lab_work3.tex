@@ -10,9 +10,6 @@
 \graphicspath{{pictures/}}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
-\usepackage{pgfplots}
-\usepackage{tikz}
-
 \usepackage[]{geometry}
 \geometry
 {
@@ -45,6 +42,22 @@
 		\Large\bfseries{<<Эффект Холла в примесном полупроводнике>>}\\
 	\end{center}
 	%-------------------------------------------------------------------------------
+	{\parindent=0pt\textbf{Цель работы.}}\\
+	Изучить поведение примесного полупроводника в магнитном поле\\
+	
+	{\parindent=0pt\textbf{Задачи, решаемы при выполнении работы.}}
+	\begin{itemize}
+		\item Получить вольт-амперную характеристику полупроводника
+		\item Получить зависимость ЭДС Холла от силы внешнего магнитного поля
+		\item Косвенно измерить удельную проводимость полупроводника, постоянную Холла, концентрацию свободных носителей зарядов и их подвижность
+	\end{itemize}
+
+{\parindent=0pt\textbf{Объект исследования.}}\\
+Эффект Холла в полупроводниках\\
+
+{\parindent=0pt\textbf{Метод экспериментального исследования.}}\\
+Измерение продольного и поперечного напряжения в полупроводнике\\
+
 	
 	{\parindent=0pt\textbf{Исходные данные.}}\\
 	\begin{center}
@@ -60,9 +73,6 @@ $l=20\;\mbox{мм}$; $h=10\;\mbox{мм}$; $d=1\;\mbox{мм}$; $S=hd=10\;\mbox{м
 	U_{\perp}=R\frac{I}{d}\,B
 \end{equation}
 
-\begin{equation}
-	R=\frac{1}{en}
-\end{equation}
 	
 	
 	{\parindent=0pt\textbf{Результаты прямых измерений.}}\\
@@ -85,43 +95,70 @@ $l=20\;\mbox{мм}$; $h=10\;\mbox{мм}$; $d=1\;\mbox{мм}$; $S=hd=10\;\mbox{м
 \end{center}
 Зависимость поперечного напряжения $U_{\perp}$ (ЭДС Холла) от силы магнитного поля
 \begin{center}
-	\begin{tabular}{c|c|c}
+	\begin{tabular}{c|c}
 		\hline
-		$I$, A&$B$, Тл  & $U_{\perp}$, В \\
+		$B$, Тл  & $U_{\perp}$, В \\
 		\hline
-		0,0& 0,007 &  30,0\\
-		0,2&  	0,014		&  30,8\\
-		0,4&  	0,032		&  32,7\\
-		0,6&  		0,056	& 35,4 \\
-		0,8& 			0,080 & 38,2 \\
-		1,0&  			0,103	&  40,7\\
-		1,2&  			0,123	& 43,0 \\
-		1,4&  		0,148	& 45,6 \\
-		1,6&  			0,176& 48,5 \\
-		1,8& 			 0,207&  51,7\\
-		2,0& 				 0,222& 53,3 \\
+		 0,007 &  30,0\\
+		  	0,014		&  30,8\\
+		  	0,032		&  32,7\\
+		 		0,056	& 35,4 \\
+		 			0,080 & 38,2 \\
+		  			0,103	&  40,7\\
+		  			0,123	& 43,0 \\
+		  		0,148	& 45,6 \\
+		 			0,176& 48,5 \\
+					 0,207&  51,7\\
+		 				 0,222& 53,3 \\
 	\end{tabular}
 \end{center}
 
 {\parindent=0pt\textbf{Обработка результатов и расчёт косвенных величин.}}\\
-Экстраполяция ВАХ:
 \begin{center}
-	\includegraphics[scale=0.6]{BAX}
+	\includegraphics[scale=0.7]{BAX}
 \end{center}
 
+\begin{center}
+	\includegraphics[scale=0.7]{Hall}
+\end{center}
+
+$\bullet$ Удельная проводимость.\\
 Из формулы (1) $k=\sigma\frac{S}{l}$, где $k=19.1\;\left( \frac{\mbox{мА}}{\mbox{В}}\right) $ - коэффициент пропорциональности ВАХ.\\
  Отсюда получаем: $\sigma=k\frac{l}{S}$
  $$ \sigma=19,1\cdot10^{-3}\cdot\frac{20\cdot10^{-3}}{10\cdot10^{-6}}=38,2\quad(\mbox{Ом}^{-1}\cdot\mbox{м}^{-1})$$
+ Погрешность  $\sigma$.
+ $$ \Delta k = 1,06\;\left( \frac{\mbox{мА}}{\mbox{В}}\right) $$
+ $$ \Delta\sigma=\Delta k \, \frac{l}{S}$$
+  $$ \Delta\sigma=2,12\;(\mbox{Ом}^{-1}\cdot\mbox{м}^{-1})$$
 
-\begin{center}
-	\includegraphics[scale=0.6]{Hall}
-\end{center}
-
+$\bullet$ Постоянная Холла.\\
 Из формулы (2): $\alpha=R\,\frac{I}{d}$, где $\alpha = 108,72\;\left( \frac{\mbox{В}}{\mbox{Тл}}\right)$ $\Rightarrow$ $R=\alpha\,\frac{d}{I}$
 $$ R=108,72\cdot\frac{10^{-3}}{15\cdot10^{-3}}=7,248\;\left( \frac{\mbox{м}^3}{\mbox{Кл}}\right) $$
+Погрешность  $R$.
+$$ \Delta\alpha=3,7\;\left( \frac{\mbox{В}}{\mbox{Тл}}\right)$$
+$$\Delta R=\Delta \alpha\,\frac{d}{I}$$
+$$\Delta R=0,25\;\left( \frac{\mbox{м}^3}{\mbox{Кл}}\right) $$
 
-По формуле (3) находим концентрацию носителей заряда:
-$$n=\frac{1}{1,6\cdot10^{-19}\cdot7,248}\approx8\cdot10^{17}\;(\mbox{м}^{-3})$$
+$\bullet$ Концентрация носителей заряда.\\
+$$n=\frac{1}{eR}$$
+$$n=\frac{1}{1,6\cdot10^{-19}\cdot7,248}=8,6\cdot10^{17}\;(\mbox{м}^{-3})$$
+$$ \Delta n =n\,\frac{\Delta R}{R}$$
+$$ \Delta n =0,3\cdot10^{17}\;(\mbox{м}^{-3})$$
 
+$\bullet$ Подвижность носителей заряда.\\
+$$ \mu=\sigma R$$
+$$ \mu=38,2\cdot7,248=276,87\;\left( \frac{\mbox{м}^2}{\mbox{В}\cdot\mbox{c}}\right) $$
+$$ \Delta\mu=\mu\cdot\sqrt{\left( \frac{\Delta R}{R}\right)^2+\left( \frac{\Delta \sigma}{\sigma}\right)^2}$$
+$$ \Delta \mu=18\;\left( \frac{\mbox{м}^2}{\mbox{В}\cdot\mbox{c}}\right)$$
+
+{\parindent=0pt\textbf{Окончательные результаты.}}\\
+$\bullet$ Удельная проводимость.\\
+ $$ \fbox{$\sigma=(38,2 \pm 2,1)\;\mbox{Ом}^{-1}\cdot\mbox{м}^{-1}$}$$
+ $\bullet$ Постоянная Холла.\\
+ $$ \fbox{$R=(7,25\pm0,25)\; \frac{\mbox{м}^3}{\mbox{Кл}}$}$$
+ $\bullet$ Концентрация носителей заряда.\\
+ $$ \fbox{$n=(8,6\pm0,3)\cdot10^{17}\;\mbox{м}^{-3}$}$$
+ $\bullet$ Подвижность носителей заряда.\\
+ $$ \fbox{$\mu=(277\pm18)\;\frac{\mbox{м}^2}{\mbox{В}\cdot\mbox{c}}$}$$
 
 	\end{document}
