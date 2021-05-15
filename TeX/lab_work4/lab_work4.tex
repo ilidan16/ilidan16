@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{csvsimple}
+\usepackage[unicode, colorlinks, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\usepackage[]{geometry}
+\geometry
+{
+	a4paper,
+	total={170mm,257mm},
+	left=25mm,
+	top=19mm,
+	right=25mm
+}
+
+\begin{document}
+	\selectlanguage{russian}
+	%----------------------------------Шапка--------------------------------------
+	\begin{figure}[htb]
+		\begin{minipage}[c]{0.12\textwidth}
+			\includegraphics[scale=0.25]{AU}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.9\textwidth}
+			{\Large\bfseries Санкт-Петербургский национальный исследовательский Академический университет имени Ж.И.~Алфёрова\\Российской академии наук}
+		\end{minipage}
+		\rule{164mm}{0.3mm}
+	\end{figure}
+	
+	\begin{center}
+		{\large\textbf{Рабочий протокол и отчёт по лабораторной работе №4 }}\\
+		Свиридов Фёдор, Александр Слободнюк, Владимир Попов
+	\end{center}
+	\begin{center}
+		\Large\bfseries{<<Свободные затухающие колебания в параллельном LC-контуре>>}\\
+	\end{center}
+	%-------------------------------------------------------------------------------
+	
+
+\csvreader[tabular=c|c, table head=\hline $X$ & $Y$\\\hline]
+{1.csv}{X=\X,Y=\Y}
+{  \X & \Y}
+
+	\end{document}
