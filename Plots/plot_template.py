@@ -16,11 +16,13 @@ y = []
 ax.scatter(x, y,  
         color = 'k',
         s = 15,
-        label = '')
+        label = '',
+        zorder=2) #zorder - кто над кем рисуюется
 
 ax.plot(x,y,
         color='red',
-        label = '')
+        label = ''
+        zorder=1)
 
 ax.legend(shadow = False,fontsize = 15,edgecolor = 'k') # легенда
 
