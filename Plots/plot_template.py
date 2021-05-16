@@ -6,9 +6,10 @@ fig, ax = plt.subplots()
 
 #ax.set_xlim([-10, 10])
 #ax.set_ylim([-2, 2])
-ax.set_title('title')
-ax.set_xlabel('ось X')
-ax.set_ylabel('ось Y')
+ax.set_title('title', fontsize = 14)
+ax.set_xlabel('ось X', fontsize = 13)
+ax.set_ylabel('ось Y', fontsize = 14)
+
 
 x = []
 y = []
@@ -21,8 +22,21 @@ ax.scatter(x, y,
 
 ax.plot(x,y,
         color='red',
-        label = ''
+        label = '',
         zorder=1)
+
+ax.errorbar(x, y,
+            yerr=1,
+            marker='o',
+            markeredgecolor='black',
+            markerfacecolor='red',
+            markersize=5,
+            capsize=3,
+            elinewidth=0.9,
+            capthick=0.9,
+            ecolor='black',
+            linestyle='None')
+
 
 ax.legend(shadow = False,fontsize = 15,edgecolor = 'k') # легенда
 
