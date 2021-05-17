@@ -10,15 +10,15 @@ for i in range(len(df['X']) - 2):
     
 b = df['R'][0]/(2*df['L'][0])
 Um = df['Y'][0]*df['volts/div'][0] * np.exp(b*df['X'][0]*df['time/div'][0])
-
 T = a.mean() * df['time/div'][0]
 w0 = (2*np.pi)/(T)
 w = np.sqrt(abs(w0**2 - b**2))
 
+
 fig, ax = plt.subplots()
 
 
-ax.set_title('Параметры контура:\n L=5,7 мГн;   C=1 мкФ;   R=5,3 Ом',fontsize=14)
+ax.set_title('Контур №3\n L=5,7 мГн;   C=1 мкФ;   R=5,3 Ом',fontsize=14)
 ax.set_xlabel('Время $t$, мс.', fontsize=13)
 ax.set_ylabel('Напряжение $U$, В',fontsize=13)
 
@@ -39,7 +39,15 @@ ax.plot(x,y,
         label = r'$U(t)=U_m\,e^{-\beta t}\,\sin{\omega t}$',
         zorder=1)
 
-ax.legend(shadow = False,fontsize = 15,edgecolor = 'k')
+box = {'facecolor':'white',    #  цвет области
+       'edgecolor': 'black',     #  цвет крайней линии
+       'boxstyle': 'round'}    #  стиль области
+text = fr'$\beta={round(b)}$'r' $c^{-1}$''\n'f'$U_m={round(Um,2)}$ B''\n'rf'$\omega={round(w)}$'r' $c^{-1}$'
+ax.text(3.6, -0.36, text, bbox = box,
+        fontsize = 13)
+
+
+ax.legend(shadow = False,fontsize = 14,edgecolor = 'k')
 ax.set_axisbelow(True) # рисует сетку НЕ на точках
 ax.grid(linestyle='-', linewidth='0.5', color='gray')
 
