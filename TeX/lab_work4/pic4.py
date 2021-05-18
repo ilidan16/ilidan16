@@ -4,12 +4,12 @@ import numpy as np
 import matplotlib.ticker as ticker
 import math
 
-df = pd.read_csv('3.csv')
+df = pd.read_csv('4.csv')
 
 fig, ax = plt.subplots()
 
 
-ax.set_title('Контур №3\n L=5,7 мГн;   C=1 мкФ;   R=5,3 Ом',fontsize=14)
+ax.set_title('Контур №4',fontsize=14)
 ax.set_ylabel('Напряжение $U$, В',fontsize=13)
 
 ax.spines['bottom'].set_position('zero')
@@ -35,10 +35,10 @@ ax.text(2, -0.36, text,
         fontsize = 13)
 
 
-ax.set_xticks(np.arange(0,5,0.25), minor=True)
+ax.set_xticks(np.arange(0,3,0.25), minor=True)
 
 fig.set_figheight(5)
 fig.set_figwidth(8)
 
-fig.savefig('pictures/pic.pdf', dpi = 600)
+fig.savefig('pictures/pic4.pdf', dpi = 600)
 plt.show()
