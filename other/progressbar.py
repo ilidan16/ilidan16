@@ -20,8 +20,9 @@ def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, 
     if iteration == total: 
         print()
 
-import time
+"""
 
+import time
 # A List of Items
 items = list(range(0, 57))
 l = len(items)
@@ -33,3 +34,4 @@ for i, item in enumerate(items):
     time.sleep(0.1)
     # Update Progress Bar
     printProgressBar(i + 1, l, prefix = 'Progress:', suffix = 'Complete', length = 50)
+"""
