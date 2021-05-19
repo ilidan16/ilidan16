@@ -45,6 +45,22 @@
 		\Large\bfseries{<<Свободные затухающие колебания в параллельном LC-контуре>>}\\
 	\end{center}
 	%-------------------------------------------------------------------------------
+	{\parindent=0pt\textbf{Цель работы.}}\\
+	Изучить свободные затухающие колебания LC-контура\\
+	
+	{\parindent=0pt\textbf{Задачи, решаемы при выполнении работы.}}
+	\begin{itemize}
+		\item Получить график затухающих колебаний для контуров с разными параметрами
+		\item Косвенно измерить логарифмический декремент затухания и добротность
+		\item Исследовать зависимость названных величин от параметров контура
+	\end{itemize}
+	
+	{\parindent=0pt\textbf{Объект исследования.}}\\
+	Переменный ток\\
+	
+	{\parindent=0pt\textbf{Метод экспериментального исследования.}}\\
+	Измерение зависимости  напряжения на конденсаторе от времени\\
+	
 	{\parindent=0pt\textbf{Исходные данные.}}\\
 	\begin{equation}
 		U(t)=U_me^{-\beta t}\sin(\omega t + \alpha)
@@ -64,6 +80,21 @@
 		\begin{equation}
 	Q\approx\frac{1}{R}\,\sqrt{\frac{L}{C}}
 \end{equation}
+		\begin{equation}
+	\delta \beta=\sqrt{\left( \frac{\Delta R}{R}\right)^2 + \left( \frac{\Delta L}{L}\right)^2}
+\end{equation}
+		\begin{equation}
+	\delta \lambda=\sqrt{\delta \beta^2 + \left( \frac{\Delta T}{T}\right)^2}
+\end{equation}
+		\begin{equation}
+	\delta \tau=\tau\cdot\delta \beta
+\end{equation}
+		\begin{equation}
+	\Delta Q=\sqrt{\left(\frac{1}{R^2}\sqrt{\frac{L}{C}}\cdot\Delta R \right)^2 + \left( \frac{1}{2R\sqrt{LC}}\cdot\Delta L\right)^2 + \left( \frac{\sqrt{L}}{2R\sqrt{C^3}}\cdot\Delta C\right)^2}
+\end{equation}
+
+
+\newpage
 	{\parindent=0pt\textbf{Результаты прямых измерений.}}\\
 \begin{figure}[htb]
 	\begin{minipage}[c][4.3in][t]{0.2\textwidth}
@@ -127,52 +158,51 @@ $\bullet$ Период колебаний $T$\\
 Для 3-го и 4-го контура по формуле (2)  $T_{34}  = 0,474$ мс. Из опыта $T_{34}=0,506$ мс\\
 
 $\bullet$ Коэффициент затухания $\beta$ \\
-$\beta_1=1461\;c^{-1}$\\
-$\beta_2=465\;c^{-1}$\\
-$\beta_3=465\;c^{-1}$\\
-$\beta_4=1461\;c^{-1}$\\
+$\beta_1=(1461\pm27)\;c^{-1}$\\
+$\beta_2=(465\pm12)\;c^{-1}$\\
+$\beta_3=(465\pm12)\;c^{-1}$\\
+$\beta_4=(1461\pm27)\;c^{-1}$\\
 
 $\bullet$ Логарифмический декремент $\lambda$\\
-$\lambda_1=0,226$\\
-$\lambda_2=0,074$\\
-$\lambda_3=0,235$\\
-$\lambda_4=0,730$\\
+$\lambda_1=(0,226\pm0,015)$\\
+$\lambda_2=(0,074\pm0,005)$\\
+$\lambda_3=(0,235\pm0,008)$\\
+$\lambda_4=(0,730\pm0,020)$\\
 
 $\bullet$ Время затухания $\tau=\frac{1}{\beta}$\\
-$\tau_1=0,684\;\mbox{мc}$\\
-$\tau_2=2,150\;\mbox{мc}$\\
-$\tau_3=2,150\;\mbox{мc}$\\
-$\tau_4=0,684\;\mbox{мc}$\\
+$\tau_1=(0,684\pm0,013)\;\mbox{мc}$\\
+$\tau_2=(2,15\pm0,06)\;\mbox{мc}$\\
+$\tau_3=(2,15\pm0,06)\;\mbox{мc}$\\
+$\tau_4=(0,684\pm0,013)\;\mbox{мc}$\\
 
 $\bullet$ Добротность $Q$\\
-$Q_1=14,49$\\
-$Q_2=45,53$\\
-$Q_3=14,24$\\
-$Q_4=4,53$\\
+$Q_1=(14,49\pm0,15)$\\
+$Q_2=(45,5\pm0,9)$\\
+$Q_3=(14,2\pm0,8)$\\
+$Q_4=(4,53\pm0,23)$\\
 }
 \begin{center}
-		\includegraphics[scale=0.7]{1.pdf}
+		\includegraphics[scale=0.65]{1.pdf}
 \end{center}
 
 \begin{center}
-	\includegraphics[scale=0.7]{2.pdf}
+	\includegraphics[scale=0.65]{2.pdf}
 \end{center}
 
 \begin{center}
-	\includegraphics[scale=0.7]{3.pdf}
+	\includegraphics[scale=0.65]{3.pdf}
 \end{center}
 
 \begin{center}
-	\includegraphics[scale=0.7]{4.pdf}
+	\includegraphics[scale=0.65]{4.pdf}
 \end{center}
-
 {\parindent=0pt\textbf{Выводы.}}\\
 Мы провели измерения свободных затухающих колебаний напряжения в LC-контурах с разными параметрами. 
 На основе полученных данных были найдены следующие величины: период колебаний~$T$, коэффициент затухания $\beta$, 
 логарифмический декремент $\lambda$, время затухания $\tau$, добротность~$Q$.
 
 В опыте было обнаружено необычное  поведение затухающих колебаний: их полупериоды (время, за которое заряды на обкладках конденсатора меняют знак) 
-не равны, что противоречит уравнению колебаний $U(t)=U_me^{-\beta t}\sin(\omega t + \alpha)$, так как данная функция обладает симметрией. 
+не равны, что противоречит уравнению $U(t)=U_me^{-\beta t}\sin(\omega t + \alpha)$, так как данная функция обладает симметрией. 
 Приведём значения полупериодов всех 4-ёх контуров (особенно хорошо различия видны в 3-ем контуре):
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -187,24 +217,21 @@ $Q_4=4,53$\\
 		\hline
 	\end{tabular}
 \end{center}
-\begin{figure}[htb]
-	\begin{minipage}[h]{0.45\linewidth}
-		\center{\includegraphics[scale=0.45]{pic1.pdf}}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.45\linewidth}
-		\center{\includegraphics[scale=0.45]{pic2.pdf}}
-	\end{minipage}
-	\vfill
-	\begin{minipage}[h]{0.45\linewidth}
-		\center{\includegraphics[scale=0.45]{pic3.pdf}}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.45\textwidth}
-		\center{\includegraphics[scale=0.45]{pic4.pdf}}
-	\end{minipage}
-\end{figure}
+
 Таким образом, перетекание заряда в одном направление происходит быстрее чем в другом. 
 Объяснения данному явлению мы не знаем, но можно предположить, что, так как период однозначно определяют L и C, то 
-в осцилляторе либо  индуктивность, либо ёмкость конденсатора зависит от направления тока.
+в осцилляторе либо  индуктивность, либо ёмкость конденсатора зависит от направления тока.\\
+
+\begin{center}
+	\includegraphics[scale=0.65]{pic1.pdf}
+\end{center}
+\begin{center}
+	\includegraphics[scale=0.65]{pic2.pdf}
+\end{center}
+\begin{center}
+	\includegraphics[scale=0.65]{pic3.pdf}
+\end{center}
+\begin{center}
+	\includegraphics[scale=0.65]{pic4.pdf}
+\end{center}
 	\end{document}

@@ -31,7 +31,7 @@ plt.scatter(xp, yp,  marker = 'o',
 plt.vlines(xp, 0, yp, linestyle="dashed", color='grey',zorder=1)
 
 text = 'Время $t$,  мс'
-ax.text(2, -0.36, text,
+ax.text(0.3, -0.36, text,
         fontsize = 13)
 
 
@@ -39,6 +39,7 @@ ax.set_xticks(np.arange(0,1,0.25), minor=True)
 
 fig.set_figheight(5)
 fig.set_figwidth(8)
+
 
 fig.savefig('pictures/pic1.pdf', dpi = 600)
 plt.show()
