@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from itertools import cycle
 import matplotlib.colors as clr
 
-import multiprocessing
 #===================================================
 # https://mandel.gart.nz/
 x = -1.748187465
