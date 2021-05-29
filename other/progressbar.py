@@ -21,7 +21,7 @@ def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, 
         print()
 
 """
-
+# Пример
 import time
 # A List of Items
 items = list(range(0, 57))
